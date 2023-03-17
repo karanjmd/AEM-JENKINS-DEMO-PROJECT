@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:isCheckedOut="{Boolean}false"
+    jcr:primaryType="cq:WorkflowModel"
+    jcr:uuid="5327da40-325d-4950-abcb-9b15efb3b156"
+    sling:resourceType="cq/workflow/components/model"
+    description="No Description"
+    title="DPSS ePolicy Content Review for Publication">
+    <metaData
+        cq:generatingPage="/conf/global/settings/workflow/models/dpss-epolicy-content-review-for-publication/jcr:content"
+        cq:lastModified="{Long}1676954037440"
+        cq:lastModifiedBy="admin"
+        jcr:primaryType="nt:unstructured"/>
+    <nodes jcr:primaryType="nt:unstructured">
+        <node0
+            jcr:primaryType="cq:WorkflowNode"
+            title="Start"
+            type="START">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node0>
+        <node1
+            jcr:primaryType="cq:WorkflowNode"
+            title="Get Initiator"
+            type="DYNAMIC_PARTICIPANT">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                DYNAMIC_PARTICIPANT="com.adobe.aem.lacounty.dpss.core.workflow.impl.process.GetInitiator"
+                timeoutHandler="com.adobe.granite.workflow.console.timeout.autoadvance.AutoAdvancer"
+                timeoutMillis="1"/>
+        </node1>
+        <node2
+            jcr:primaryType="cq:WorkflowNode"
+            description="A process to lock the payload."
+            title="Lock Initial Payload Process"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                PROCESS="com.day.cq.workflow.impl.process.LockProcess"
+                PROCESS_AUTO_ADVANCE="true"/>
+        </node2>
+        <node3
+            jcr:primaryType="cq:WorkflowNode"
+            description="Goto Step"
+            title="Section  Participant"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                PROCESS="com.adobe.granite.workflow.core.process.GotoProcess"
+                PROCESS_AUTO_ADVANCE="false"
+                script="function check(){&#xd;&#xa;   &#xd;&#xa;   {&#xd;&#xa;      return true;&#xd;&#xa;   }&#xd;&#xa;}"
+                TARGET_NODE_ID="node7"
+                TARGET_NODE_PATH="/conf/global/settings/workflow/models/dpss-epolicy-content-review-for-publication/jcr:content/flow/dynamic_participant_1274380060"/>
+        </node3>
+        <node4
+            jcr:primaryType="cq:WorkflowNode"
+            description="A process to unlock the payload."
+            title="Unlock Initial Payload Process"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                PROCESS="com.day.cq.workflow.impl.process.UnlockProcess"
+                PROCESS_AUTO_ADVANCE="true"/>
+        </node4>
+        <node5
+            jcr:primaryType="cq:WorkflowNode"
+            title="Author Content"
+            type="DYNAMIC_PARTICIPANT">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                DO_NOTIFY="true"
+                DYNAMIC_PARTICIPANT="/libs/workflow/scripts/initiator-participant-chooser.ecma"/>
+        </node5>
+        <node6
+            jcr:primaryType="cq:WorkflowNode"
+            description="A process to lock the payload."
+            title="Lock Payload Process"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                PROCESS="com.day.cq.workflow.impl.process.LockProcess"
+                PROCESS_AUTO_ADVANCE="true"/>
+        </node6>
+        <node7
+            jcr:primaryType="cq:WorkflowNode"
+            title="Get Participant"
+            type="DYNAMIC_PARTICIPANT">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                DO_NOTIFY="true"
+                DYNAMIC_PARTICIPANT="com.adobe.aem.lacounty.dpss.core.workflow.impl.process.ReviewerDynamicParticipantStep"
+                timeoutHandler="com.adobe.granite.workflow.console.timeout.autoadvance.AutoAdvancer"
+                timeoutMillis="1"/>
+        </node7>
+        <node8
+            jcr:primaryType="cq:WorkflowNode"
+            description="Goto Step"
+            title="Send to Section"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                PROCESS="com.adobe.granite.workflow.core.process.GotoProcess"
+                PROCESS_AUTO_ADVANCE="false"
+                script="function check(){&#xd;&#xa;        var part =  workflowData.getMetaDataMap().get(&quot;Participant&quot;);&#xd;&#xa;          if (part ==  &quot;academy-approvers&quot; || part ==  &quot;ihss-approvers&quot; ){&#xd;&#xa;        log.info(&quot;goto script 1: found key&quot;+workflowData.getMetaDataMap().get(&quot;Participant&quot;));&#xd;&#xa;         &#xd;&#xa;&#x9;&#x9; return true;&#xd;&#xa;  &#x9;   &#xd;&#xa;   }else {&#xd;&#xa; log.info(&quot;goto script 2: found key&quot;+workflowData.getMetaDataMap().get(&quot;Participant&quot;));&#xd;&#xa;return false;&#xd;&#xa;}&#xd;&#xa;}"
+                TARGET_NODE_ID="node10"
+                TARGET_NODE_PATH="/conf/global/settings/workflow/models/dpss-epolicy-content-review-for-publication/jcr:content/flow/dynamic_participant_1732156050"/>
+        </node8>
+        <node9
+            jcr:primaryType="cq:WorkflowNode"
+            title="Reviewer Approval Step"
+            type="DYNAMIC_PARTICIPANT">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                DO_NOTIFY="true"
+                DYNAMIC_PARTICIPANT="com.adobe.aem.lacounty.dpss.core.workflow.impl.process.ReviewerDynamicParticipantStep"/>
+        </node9>
+        <node10
+            jcr:primaryType="cq:WorkflowNode"
+            title="Section Approval Step"
+            type="DYNAMIC_PARTICIPANT">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                DO_NOTIFY="true"
+                DYNAMIC_PARTICIPANT="com.adobe.aem.lacounty.dpss.core.workflow.impl.process.SectionDynamicParticipantStep"/>
+        </node10>
+        <node11
+            jcr:primaryType="cq:WorkflowNode"
+            description="Goto Step"
+            title="Send to ADA or Publish"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                PROCESS="com.adobe.granite.workflow.core.process.GotoProcess"
+                PROCESS_AUTO_ADVANCE="false"
+                script="function check(){&#xd;&#xa;        var part2 =  workflowData.getMetaDataMap().get(&quot;Participant&quot;);&#xd;&#xa;          if (part2 ==  &quot;igr-approvers&quot; || part2 ==  &quot;igr-reviewers&quot;  || part2 ==  &quot;line-ops-approvers&quot; || part2 ==  &quot;line-ops-reviewers&quot; ){&#xd;&#xa;        log.info(&quot;ada script 1: found key&quot;+workflowData.getMetaDataMap().get(&quot;Participant&quot;));&#xd;&#xa;         &#xd;&#xa;&#x9;&#x9; return true;&#xd;&#xa;  &#x9;   &#xd;&#xa;   }else{&#xd;&#xa;log.info(&quot;ada script 2: found key&quot;+workflowData.getMetaDataMap().get(&quot;Participant&quot;));&#xd;&#xa;   return false;&#xd;&#xa;   }&#xd;&#xa;}"
+                TARGET_NODE_ID="node21"
+                TARGET_NODE_PATH="/conf/global/settings/workflow/models/dpss-epolicy-content-review-for-publication/jcr:content/flow/unlockpayloadprocess_1700284548"/>
+        </node11>
+        <node12
+            jcr:primaryType="cq:WorkflowNode"
+            title="ADA Compliance Review"
+            type="PARTICIPANT">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                DO_NOTIFY="true"
+                PARTICIPANT="dpss-ada-compliance-approver-group"/>
+        </node12>
+        <node13
+            jcr:primaryType="cq:WorkflowNode"
+            title="Send for Branch, Division or Bureau Approval"
+            type="DYNAMIC_PARTICIPANT">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                DO_NOTIFY="true"
+                DYNAMIC_PARTICIPANT="com.adobe.aem.lacounty.dpss.core.workflow.impl.process.SectionDynamicParticipantStep"
+                timeoutHandler="com.adobe.granite.workflow.console.timeout.autoadvance.AutoAdvancer"
+                timeoutMillis="1"/>
+        </node13>
+        <node14
+            jcr:primaryType="cq:WorkflowNode"
+            description="Goto Step"
+            title="Send to Bureau"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                PROCESS="com.adobe.granite.workflow.core.process.GotoProcess"
+                PROCESS_AUTO_ADVANCE="false"
+                script="function check(){&#xd;&#xa;        var part =  workflowData.getMetaDataMap().get(&quot;Participant&quot;);&#xd;&#xa;          if (part==  &quot;it-security-reviewers&quot;  || part ==  &quot;it-security-approvers&quot;){&#xd;&#xa;        log.info(&quot;division script 1: found key&quot;+workflowData.getMetaDataMap().get(&quot;Participant&quot;));&#xd;&#xa;         &#xd;&#xa;&#x9;&#x9; return true;&#xd;&#xa;  &#x9;   &#xd;&#xa;   }else {&#xd;&#xa; log.info(&quot;division script 2: found key&quot;+workflowData.getMetaDataMap().get(&quot;Participant&quot;));&#xd;&#xa;return false;&#xd;&#xa;}&#xd;&#xa;}"
+                TARGET_NODE_ID="node20"
+                TARGET_NODE_PATH="/conf/global/settings/workflow/models/dpss-epolicy-content-review-for-publication/jcr:content/flow/dynamic_participant_1387819946"/>
+        </node14>
+        <node15
+            jcr:primaryType="cq:WorkflowNode"
+            description="Goto Step"
+            title="Send to Division"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                PROCESS="com.adobe.granite.workflow.core.process.GotoProcess"
+                PROCESS_AUTO_ADVANCE="false"
+                script="function check(){&#xd;&#xa;        var part1 =  workflowData.getMetaDataMap().get(&quot;Participant&quot;);&#xd;&#xa;          if (part1==  &quot;academy-reviewers&quot;  || part1 ==  &quot;techsupport-reviewers&quot;){&#xd;&#xa;        log.info(&quot;division script 1: found key&quot;+workflowData.getMetaDataMap().get(&quot;Participant&quot;));&#xd;&#xa;         &#xd;&#xa;&#x9;&#x9; return false;&#xd;&#xa;  &#x9;   &#xd;&#xa;   }else {&#xd;&#xa; log.info(&quot;division script 2: found key&quot;+workflowData.getMetaDataMap().get(&quot;Participant&quot;));&#xd;&#xa;return true;&#xd;&#xa;}&#xd;&#xa;}"
+                TARGET_NODE_ID="node18"
+                TARGET_NODE_PATH="/conf/global/settings/workflow/models/dpss-epolicy-content-review-for-publication/jcr:content/flow/dynamic_participant_1840274672"/>
+        </node15>
+        <node16
+            jcr:primaryType="cq:WorkflowNode"
+            title="Branch Approval Step"
+            type="DYNAMIC_PARTICIPANT">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                DO_NOTIFY="true"
+                DYNAMIC_PARTICIPANT="com.adobe.aem.lacounty.dpss.core.workflow.impl.process.BranchDynamicParticipantStep"/>
+        </node16>
+        <node17
+            jcr:primaryType="cq:WorkflowNode"
+            description="Goto Step"
+            title="Send to Division or Publish"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                PROCESS="com.adobe.granite.workflow.core.process.GotoProcess"
+                PROCESS_AUTO_ADVANCE="false"
+                script="function check(){&#xd;&#xa;        var part =  workflowData.getMetaDataMap().get(&quot;Participant&quot;);&#xd;&#xa;          if (part ==  &quot;academy-reviewers&quot; || part ==  &quot;hcma-approvers&quot; ){&#xd;&#xa;        log.info(&quot;branch script 1: found key&quot;+workflowData.getMetaDataMap().get(&quot;Participant&quot;));&#xd;&#xa;         &#xd;&#xa;&#x9;&#x9; return true;&#xd;&#xa;  &#x9;   &#xd;&#xa;   }else{&#xd;&#xa; log.info(&quot;branch script 2: found key&quot;+workflowData.getMetaDataMap().get(&quot;Participant&quot;));&#xd;&#xa;   return false;&#xd;&#xa;   }&#xd;&#xa;}"
+                TARGET_NODE_ID="node21"
+                TARGET_NODE_PATH="/conf/global/settings/workflow/models/dpss-epolicy-content-review-for-publication/jcr:content/flow/unlockpayloadprocess_1700284548"/>
+        </node17>
+        <node18
+            jcr:primaryType="cq:WorkflowNode"
+            title="Division Approval Step"
+            type="DYNAMIC_PARTICIPANT">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                DO_NOTIFY="true"
+                DYNAMIC_PARTICIPANT="com.adobe.aem.lacounty.dpss.core.workflow.impl.process.DivisionDynamicParticipantStep"/>
+        </node18>
+        <node19
+            jcr:primaryType="cq:WorkflowNode"
+            description="Goto Step"
+            title="Send to Bureau or Publish"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                PROCESS="com.adobe.granite.workflow.core.process.GotoProcess"
+                PROCESS_AUTO_ADVANCE="false"
+                script="function check(){&#xd;&#xa;        var part =  workflowData.getMetaDataMap().get(&quot;Participant&quot;);&#xd;&#xa;          if (part ==  &quot;techsupport-reviewer&quot; || part ==  &quot;itd-approvers&quot; ){&#xd;&#xa;        log.info(&quot;goto script 1: found key&quot;+workflowData.getMetaDataMap().get(&quot;Participant&quot;));&#xd;&#xa;         &#xd;&#xa;&#x9;&#x9; return false;&#xd;&#xa;  &#x9;   &#xd;&#xa;   }else{&#xd;&#xa;   return true;&#xd;&#xa;   }&#xd;&#xa;}"
+                TARGET_NODE_ID="node21"
+                TARGET_NODE_PATH="/conf/global/settings/workflow/models/dpss-epolicy-content-review-for-publication/jcr:content/flow/unlockpayloadprocess_1700284548"/>
+        </node19>
+        <node20
+            jcr:primaryType="cq:WorkflowNode"
+            title="Bureau Approval Step"
+            type="DYNAMIC_PARTICIPANT">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                DO_NOTIFY="true"
+                DYNAMIC_PARTICIPANT="com.adobe.aem.lacounty.dpss.core.workflow.impl.process.BureauDynamicParticipantStep"/>
+        </node20>
+        <node21
+            jcr:primaryType="cq:WorkflowNode"
+            description="A process to unlock the payload."
+            title="Unlock Payload Process"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                PROCESS="com.day.cq.workflow.impl.process.UnlockProcess"
+                PROCESS_AUTO_ADVANCE="true"/>
+        </node21>
+        <node22
+            jcr:primaryType="cq:WorkflowNode"
+            title="Activate Page with References"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                PROCESS="com.adobe.aem.lacounty.dpss.core.workflow.adobe.support.replication.impl.ReplicatePageProcess"
+                PROCESS_ARGS="replicationType=ACTIVATE"
+                PROCESS_AUTO_ADVANCE="true"/>
+        </node22>
+        <node23
+            jcr:primaryType="cq:WorkflowNode"
+            title="Set Replicated By Property to Workflow Initiator"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                PROCESS="com.adobe.acs.commons.replication.status.impl.ReplicatedByWorkflowProcess"
+                PROCESS_AUTO_ADVANCE="true"/>
+        </node23>
+        <node24
+            jcr:primaryType="cq:WorkflowNode"
+            title="Archive Page"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                PROCESS="com.adobe.aem.lacounty.dpss.core.workflow.impl.process.ArchiveProcessStepImpl"
+                PROCESS_AUTO_ADVANCE="true"/>
+        </node24>
+        <node25
+            jcr:primaryType="cq:WorkflowNode"
+            title="End"
+            type="END">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node25>
+    </nodes>
+    <transitions jcr:primaryType="nt:unstructured">
+        <node0_x0023_node1
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node0"
+            rule=""
+            to="node1">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node0_x0023_node1>
+        <node1_x0023_node2
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node1"
+            rule=""
+            to="node2">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node1_x0023_node2>
+        <node2_x0023_node3
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node2"
+            rule=""
+            to="node3">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node2_x0023_node3>
+        <node3_x0023_node4
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node3"
+            rule=""
+            to="node4">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node3_x0023_node4>
+        <node4_x0023_node5
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node4"
+            rule=""
+            to="node5">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node4_x0023_node5>
+        <node5_x0023_node6
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node5"
+            rule=""
+            to="node6">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node5_x0023_node6>
+        <node6_x0023_node7
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node6"
+            rule=""
+            to="node7">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node6_x0023_node7>
+        <node7_x0023_node8
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node7"
+            rule=""
+            to="node8">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node7_x0023_node8>
+        <node8_x0023_node9
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node8"
+            rule=""
+            to="node9">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node8_x0023_node9>
+        <node9_x0023_node10
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node9"
+            rule=""
+            to="node10">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node9_x0023_node10>
+        <node10_x0023_node11
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node10"
+            rule=""
+            to="node11">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node10_x0023_node11>
+        <node11_x0023_node12
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node11"
+            rule=""
+            to="node12">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node11_x0023_node12>
+        <node12_x0023_node13
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node12"
+            rule=""
+            to="node13">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node12_x0023_node13>
+        <node13_x0023_node14
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node13"
+            rule=""
+            to="node14">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node13_x0023_node14>
+        <node14_x0023_node15
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node14"
+            rule=""
+            to="node15">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node14_x0023_node15>
+        <node15_x0023_node16
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node15"
+            rule=""
+            to="node16">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node15_x0023_node16>
+        <node16_x0023_node17
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node16"
+            rule=""
+            to="node17">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node16_x0023_node17>
+        <node17_x0023_node18
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node17"
+            rule=""
+            to="node18">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node17_x0023_node18>
+        <node18_x0023_node19
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node18"
+            rule=""
+            to="node19">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node18_x0023_node19>
+        <node19_x0023_node20
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node19"
+            rule=""
+            to="node20">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node19_x0023_node20>
+        <node20_x0023_node21
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node20"
+            rule=""
+            to="node21">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node20_x0023_node21>
+        <node21_x0023_node22
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node21"
+            rule=""
+            to="node22">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node21_x0023_node22>
+        <node22_x0023_node23
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node22"
+            rule=""
+            to="node23">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node22_x0023_node23>
+        <node23_x0023_node24
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node23"
+            rule=""
+            to="node24">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node23_x0023_node24>
+        <node24_x0023_node25
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node24"
+            to="node25">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node24_x0023_node25>
+    </transitions>
+</jcr:root>

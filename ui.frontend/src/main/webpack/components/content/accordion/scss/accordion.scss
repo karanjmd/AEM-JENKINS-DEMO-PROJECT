@@ -1,0 +1,172 @@
+.cmp-accordion {}
+.cmp-accordion__item {}
+.cmp-accordion__header {}
+.cmp-accordion__button {}
+.cmp-accordion__button--expanded {}
+.cmp-accordion__title {}
+.cmp-accordion__icon {}
+.cmp-accordion__panel {}
+.cmp-accordion__panel--expanded {}
+.cmp-accordion__panel--hidden {}
+
+.accordion {
+    &-card__header {
+        border-bottom: 2px solid color(blue);
+        display: flex;
+        flex-grow: 1;
+        min-height: 45px;
+        padding-bottom: 7px;
+        cursor: pointer;
+        &--title {
+            display: flex;
+            align-items: center;
+            padding: 0.5rem 0;
+            vertical-align: middle;
+            width: 100%;
+            .heading--medium {
+                font-weight: 700;
+                font-size: 1rem;
+                @include respond-above(sm) {
+                    font-size: 1.125rem;
+                }
+            }
+        }
+    }
+    .accordion-card {
+        margin: 0 0 0.9375rem 0;
+        &__header {
+            &--icon button {
+                background: none;
+                border: none;
+                padding: 0;
+                padding-left: 5px;
+                box-shadow: none;
+                margin: 0px;
+            }
+        }
+        .faq-accordion {
+            &__content {
+                display: none;
+            }
+        }
+        &__content {
+            height: auto;
+            opacity: 1;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+        }
+    }
+    .faq__accordion {
+        .faq-accordion {
+            &__content {
+                display: block;
+            }
+        }
+        &__content {
+            display: none;
+        }
+        .accordion-card {
+            &__header {
+                background: color(grey6);
+                padding: 0px;
+                border: none;
+                &--iconLeft {
+                    padding: 0.9375rem;
+                    align-items: center;
+                    justify-content: center;
+                    margin: 0 0.9375rem 0 0;
+                    color: color(white);
+                }
+                &--icon {
+                    padding: 0.9375rem;
+                    button {
+                        background: none;
+                        border: none;
+                        padding: 0;
+                        padding-left: 5px;
+                        i {
+                            color: color(grey7);
+                            font-size: 1.25rem;
+                            &.fa-plus-square {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+                &.active {
+                    .fa-caret-right {
+                        &:before {
+                            content: '\F0D8';
+                        }
+                    }
+                }
+            }
+            &__content {
+                display: flex;
+                position: relative;
+                max-height: 0;
+                opacity: 1;
+                transition-timing-function: ease-in;
+                transition-duration: 0.2s;
+                background: color(grey6);
+                .accordion-card__header--iconLeft:before {
+                    visibility: hidden;
+                }
+            }
+        }
+        .accordion-content {
+            &__head {
+                padding: 0 15px 15px 0px;
+                display: flex;
+                align-items: center;
+                vertical-align: middle;
+                width: 100%;
+                height: 100%;
+                .accordion-card {
+                    &__description {
+                        padding-top: 5px;
+                        p {
+                            color: color(black);
+                            margin: 0;
+                            height: auto;
+                        }
+                    }
+                    &__header--icon {
+                        visibility: hidden;
+                    }
+                }
+            }
+        }
+    }
+    .icon {
+        &__bg {
+            &--lighter-blue {
+                .list { 
+                    &__view {
+                        &--icon {
+                            background: color(accordianblue);
+                        }
+                    }
+                }
+                &:hover {
+                    .fa-caret-right {
+                        color: color(accordianblue) !important;
+                    }
+                }
+            }
+        }
+    }
+    .title__img__list {
+        margin: 1.875rem 0 3.125rem 0;
+        .offsetB15.heading--large, h2 {
+            color: color(black);
+            font-size: 2.25rem;
+            font-weight: 300;
+            @include respond-above(sm) {
+                font-size: 2.625rem;
+                font-weight: 300;
+            }
+        } 
+    }
+}

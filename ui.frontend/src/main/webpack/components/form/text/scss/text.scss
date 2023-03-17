@@ -1,0 +1,15 @@
+.cmp-form-text {}
+.cmp-form-text__help-block {}
+.cmp-form-text__textarea {}
+.cmp-form-text__text {
+    display: block;
+    width: 100%;
+    padding: 0.9375rem;
+    color: color(grey5);
+    background-color: color(white);
+    background-clip: padding-box;
+    border: 1px solid color(grey4);
+    border-radius: 0;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    margin-bottom: 0.625rem;
+}

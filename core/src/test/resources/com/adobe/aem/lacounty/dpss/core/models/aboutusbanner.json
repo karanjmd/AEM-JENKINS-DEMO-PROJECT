@@ -1,0 +1,15 @@
+{
+	"aboutus": {
+		"jcr:primaryType": "nt:unstructured",
+		"jcr:createdBy": "admin",
+		"jcr:title": "LAVA",
+		"subText": "<p>this is about us</p>\r\n",
+		"ybnLinkImage": "/etc.clientlibs/dpss/clientlibs/clientlib-site/resources/images/Your-Benefits.png",
+		"jcr:lastModifiedBy": "admin",
+		"jcr:created": "Fri Jul 22 2022 12:51:22 GMT+0530",
+		"bgImage": "/content/dam/dpss/burst-kUqqaRjJuw0-unsplash.png",
+		"jcr:lastModified": "Fri Jul 22 2022 12:51:46 GMT+0530",
+		"sling:resourceType": "dpss/components/content/about-us-banner",
+		"textIsRich": "true"
+	}
+}

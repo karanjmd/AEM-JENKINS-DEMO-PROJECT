@@ -1,0 +1,35 @@
+	<sly data-sly-use.alertModel="com.adobe.aem.lacounty.dpss.core.models.AlertNotificationModel" />
+  <span value="${alertModel.timer}" id ="alertTimer" class="is-hidden"></span>
+    <div data-sly-test="${alertModel.alertOrNotification == 'alert'}" class="alert-danger width--full">
+      <div class="container-wrapper">
+        <div class="alert alert-dismissible">
+          <span class="fa fa-exclamation-triangle"></span>
+          <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+          <div> 
+            <div class="alert__info">
+                <p class="alertInfo__description">${alertModel.alertNotificationContent @ context='html'}</p>
+            </div>
+        </div>
+        </div>
+      </div>
+	  
+    </div>
+    <div data-sly-test="${alertModel.alertOrNotification == 'notification'}" class=" alert-info width--full">
+      <div class="container-wrapper">
+        <div class="alert alert-dismissible">
+          <span class="fa fa-bell"></span>
+          <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+          <div> 
+            <div class="alert__info">
+             
+                <p class="alertInfo__description">${alertModel.alertNotificationContent @ context='html'}</p>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+	 <div data-sly-test="${alertModel.alertOrNotification == 'none'}" class="width--full">
+
+	<div data-sly-test="${wcmmode.edit}" class="cq-placeholder"
+	data-emptytext="Event Details"></div>    
+    </div>

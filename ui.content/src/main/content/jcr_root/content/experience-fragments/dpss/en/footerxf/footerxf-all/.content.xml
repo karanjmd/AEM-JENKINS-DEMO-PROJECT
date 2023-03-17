@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2022-06-30T20:01:59.683+05:30"
+        cq:lastModifiedBy="admin"
+        cq:tags="[]"
+        cq:template="/conf/dpss/settings/wcm/templates/dpss-experience-fragment"
+        cq:xfVariantType="web"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="FooterXF All"
+        sling:resourceType="dpss/components/content/xfpage">
+        <root
+            jcr:lastModified="{Date}2022-06-17T12:48:57.536+05:30"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="dpss/components/content/layoutContainer"
+            layout="responsiveGrid">
+            <footer
+                jcr:created="{Date}2022-06-22T14:02:05.491+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2022-06-30T20:01:59.678+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="dpss/components/structure/footer"
+                address="12860 Crossroads Parkway South City of Industry, CA. 91746"
+                copyrights="© 2021 MY DPSS"
+                email="webmaster@dpss.gov"
+                heading="Contacts"
+                heading2="Bureaus"
+                heading3="External Links"
+                heading4="Policy"
+                logo="/content/dam/dpss/seal@2x.png"
+                logolink="#"
+                phone="(562) 908-8400"
+                reserved="All rights reserved"
+                tagline="Enriching Lives through effective and caring service"
+                title="Department of Public Social Services">
+                <bureauslinkdetails jcr:primaryType="nt:unstructured">
+                    <item0
+                        jcr:primaryType="nt:unstructured"
+                        blinktext="Administrative Services (BAS)"
+                        blinkURL="https://www.google.com"/>
+                    <item1
+                        jcr:primaryType="nt:unstructured"
+                        blinktext="Contract and Technical Services (BCTS)"
+                        blinkURL="https://www.google.com"/>
+                    <item2
+                        jcr:primaryType="nt:unstructured"
+                        blinktext="Human Resources (BHR)"
+                        blinkURL="https://www.google.com"/>
+                    <item3
+                        jcr:primaryType="nt:unstructured"
+                        blinktext="Program and Policy (BPP)"
+                        blinkURL="https://www.google.com"/>
+                    <item4
+                        jcr:primaryType="nt:unstructured"
+                        blinktext="Special Operations (BSO)"
+                        blinkURL="https://www.google.com"/>
+                    <item5
+                        jcr:primaryType="nt:unstructured"
+                        blinktext="Workforce Services North (BWSN)"
+                        blinkURL="https://www.google.com"/>
+                    <item6
+                        jcr:primaryType="nt:unstructured"
+                        blinktext="Workforce Services South (BWSS)"
+                        blinkURL="https://www.google.com"/>
+                </bureauslinkdetails>
+                <externallinkdetails jcr:primaryType="nt:unstructured">
+                    <item0
+                        jcr:primaryType="nt:unstructured"
+                        linktext="211 LA"
+                        linkURL="https://www.google.com"/>
+                    <item1
+                        jcr:primaryType="nt:unstructured"
+                        linktext="CDSS"
+                        linkURL="https://www.google.com"/>
+                    <item2
+                        jcr:primaryType="nt:unstructured"
+                        linktext="Another link"
+                        linkURL="https://www.google.com"/>
+                    <item3
+                        jcr:primaryType="nt:unstructured"
+                        linktext="Another link"
+                        linkURL="https://www.google.com"/>
+                    <item4
+                        jcr:primaryType="nt:unstructured"
+                        linktext="Another link"
+                        linkURL="https://www.google.com"/>
+                    <item5
+                        jcr:primaryType="nt:unstructured"
+                        linktext="Another link"
+                        linkURL="https://www.google.com"/>
+                </externallinkdetails>
+                <policylinkdetails jcr:primaryType="nt:unstructured">
+                    <item0
+                        jcr:primaryType="nt:unstructured"
+                        plinktext="Accessibilities"
+                        plinkURL="https://www.google.com"/>
+                    <item1
+                        jcr:primaryType="nt:unstructured"
+                        plinktext="Disclaimer"
+                        plinkURL="https://www.google.com"/>
+                    <item2
+                        jcr:primaryType="nt:unstructured"
+                        plinktext="Privacy policy"
+                        plinkURL="https://www.google.com"/>
+                </policylinkdetails>
+            </footer>
+        </root>
+    </jcr:content>
+</jcr:root>

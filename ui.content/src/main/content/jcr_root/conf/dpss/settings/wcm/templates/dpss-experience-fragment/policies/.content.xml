@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2022-11-10T14:08:02.648+05:30"
+        cq:lastModifiedBy="admin"
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="wcm/core/components/policies/mappings">
+        <root
+            cq:policy="dpss/components/content/layoutContainer/policy_1655882630322"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/core/components/policies/mapping">
+            <dpss jcr:primaryType="nt:unstructured">
+                <components jcr:primaryType="nt:unstructured">
+                    <content jcr:primaryType="nt:unstructured">
+                        <alert-notification jcr:primaryType="nt:unstructured">
+                            <v1 jcr:primaryType="nt:unstructured">
+                                <alert-notification
+                                    cq:policy="dpss/components/content/alert-notification/v1/alert-notification/policy_1667963412224"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="wcm/core/components/policies/mapping"/>
+                            </v1>
+                        </alert-notification>
+                    </content>
+                </components>
+            </dpss>
+        </root>
+    </jcr:content>
+</jcr:root>

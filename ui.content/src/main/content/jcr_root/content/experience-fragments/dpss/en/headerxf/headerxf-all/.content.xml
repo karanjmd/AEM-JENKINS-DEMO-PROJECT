@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2022-11-11T18:13:50.394+05:30"
+        cq:lastModifiedBy="admin"
+        cq:tags="[]"
+        cq:template="/conf/dpss/settings/wcm/templates/dpss-experience-fragment"
+        cq:xfVariantType="web"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="HeaderXF All"
+        sling:resourceType="dpss/components/content/xfpage">
+        <root
+            jcr:lastModified="{Date}2022-06-17T12:48:57.536+05:30"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="dpss/components/content/layoutContainer"
+            layout="responsiveGrid">
+            <megamenu
+                jcr:created="{Date}2022-06-29T15:32:58.267+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2022-11-09T20:50:08.562+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="dpss/components/content/megamenu"
+                logo="/content/dam/dpss/dpss-logo.svg"
+                logoimage="/content/dpss/en/Homepage"
+                logolink="/content/dpss/en/Homepage">
+                <titleandlinks jcr:primaryType="nt:unstructured">
+                    <item0
+                        jcr:primaryType="nt:unstructured"
+                        links="/content/dpss/en/Homepage/sites/application"
+                        openInTab="true"
+                        title="Applications"/>
+                    <item1
+                        jcr:primaryType="nt:unstructured"
+                        links="/content/dpss/en/Homepage/resources"
+                        openInTab="true"
+                        title="Resources"/>
+                    <item2
+                        jcr:primaryType="nt:unstructured"
+                        links="/content/dpss/en/Homepage/sites/services"
+                        title="Services"/>
+                    <item3
+                        jcr:primaryType="nt:unstructured"
+                        links="/content/dpss/en/Homepage/aboutdpss"
+                        title="About DPSS"/>
+                    <item4
+                        jcr:primaryType="nt:unstructured"
+                        links="/content/dpss/en/Homepage/sites/helpandsupport"
+                        title="Help &amp; Support"/>
+                    <item5
+                        jcr:primaryType="nt:unstructured"
+                        links="/content/dpss/en/homepage/sites"
+                        title="Site"/>
+                </titleandlinks>
+            </megamenu>
+            <breadcrumb
+                jcr:created="{Date}2022-06-29T15:38:54.682+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2022-06-29T15:39:34.577+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="dpss/components/content/breadcrumb/v1/breadcrumb"
+                hideCurrent="false"
+                showHidden="true"
+                startLevel="1"/>
+        </root>
+    </jcr:content>
+</jcr:root>

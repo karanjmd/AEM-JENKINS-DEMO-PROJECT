@@ -1,0 +1,39 @@
+.carousel{
+        .cmp-carousel {
+        &.carousel-style{
+            .cmp-carousel__content {
+                .cmp-carousel__item {
+                    margin-bottom:0.7rem;
+                }
+                .cmp-carousel__action {
+                    background-color: color(white);
+                    box-shadow:none;
+                    border: 2px solid color(blue);
+                    margin-left: 7px;
+                    padding: 0.1rem;
+                    &:hover{
+                        background-color: color(white);
+                    }
+                    .cmp-carousel__action-icon {
+                        &::before{
+                            color: color(blue);
+                            font-size: fsize(24);
+                        }
+                    }
+                }
+                .cmp-carousel__indicators {
+                    justify-content: center;
+                    .cmp-carousel__indicator {
+                        width: 0.8rem;
+                        height: 0.8rem;
+                        border: 1px solid color(blue);
+                        background-color: color(white);
+                        margin: 0 0.5rem;
+                    }&.cpm-caousel__indicator--active{
+                        background-color: color(blue);
+                    }                   
+                }
+            }
+        }
+    }
+}

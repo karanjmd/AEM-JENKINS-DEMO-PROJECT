@@ -1,0 +1,180 @@
+footer {
+    background-color: color(navyblue);
+    color: color(white);
+    padding: 4.25rem 0 4.25rem 0;
+    font-weight:fweight(400);
+    border-top: 13px solid color(orange);
+    text-align: left;
+    font-family: inherit;
+    .footer__container {
+        display: flex;
+        margin: 0 auto;
+        justify-content: space-between;
+        flex-direction: column;
+            @include respond-above(sm){
+                flex-wrap: wrap;
+                flex-direction: row;
+                }
+            .footer__item {
+                margin: 2%;            
+                flex: 1 0 21%;
+                @include respond-above(sm){
+                    width: 46%;
+                    &:first-child{
+                        margin: 2% 2% 2% 0;
+                    }
+                    &:last-child{
+                        margin: 2% 0 2% 2%;
+                    }
+                }
+                .footer__title {
+                    text-transform: uppercase;
+                    margin-bottom: 30px;
+                    font-size: fsize(18);
+                    font-weight:fweight(700);
+                    margin-top: 30px;
+                }
+                .footer__subTitle {
+                    font-size: fsize(18);
+                    font-weight:fweight(700);
+                    margin-bottom: 13px;
+                }
+                .footer__column{
+                    .footer__list-container {
+                        list-style: none;
+                        margin: 0;
+                        padding: 0;
+                        .footer__list {
+                            display: flex;
+                            padding: 0;
+                            text-align: left;
+                            padding: 0 0 14px 0;
+                            flex-wrap: nowrap;
+                            justify-content: flex-start;
+                            .footer__icon {
+                                margin-right: 15px;
+                                color: color(white);
+                                font-size: fsize(20);
+                                position: relative;
+                                top: 3px;
+                            }
+                            .footer__link {
+                                text-decoration: none;
+                                color: color(white)!important;
+                                font-size: fsize(18);
+                                &:hover{
+                                    outline: none;
+                                    color: color(orange) !important;
+                                    transition: ease .2s;
+                                }
+                                &:focus{
+                                    outline: none;
+                                    color: color(orange) !important;
+                                }
+                            }
+                            .footer__text{
+	                               font-size:fsize(18);
+	                               color: color(white);
+                           }
+                        }
+                    }
+                }
+            }
+    }
+    .footer__horizontal-line {
+        border-color: color(grey5);
+        border:1px solid color(grey5);
+        background-color: color(grey5);
+    }
+    .footer__bottom {
+        display: flex;
+        flex-direction: column;
+        margin: 2rem 0;
+        @include respond-above(sm){
+            flex-direction: row;
+        }
+        .footer__copyright {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            margin: 2rem 0;
+            @include respond-above(sm){
+                width: 50%;
+                margin: 0;
+            }
+            .footer__logo {
+                display: inline-block;
+                margin:0 1rem 0 0rem;
+                max-width: 64%;
+                @include respond-above(md){
+                    max-width: 12%;
+                }
+                img{                    
+                    width: 100%;                   
+                }
+            }
+            .footer__copyright-text {
+                display: inline-block;
+                // width: 50%;
+                p{
+                    color: color(white);
+                    margin: 0 0 0.3125rem 0;
+                    line-height: 150%;
+                    &.tagline__text{
+                        font-style: italic;
+                        font-size: fsize(20);
+                    }
+                    &.copyright__text{
+                        font-weight: fweight(600);
+                        font-size: fsize(20);
+                    }
+                    &.reserved__text{
+                        font-weight: fweight(400);
+                        font-size: fsize(16);
+                    }
+                    @include respond-above(sm){
+                        margin: 0;
+                    }
+                }
+            }
+        }
+        .footer__social-icons {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @include respond-above(sm){
+                width: 50%;
+                justify-content: end;
+            }
+            .social-icons__list {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                .icons__list {
+                    display: inline-block;
+                    .icon__link {
+                        text-decoration: none;
+                        font-size: fsize(32);
+                        color: color(white);
+                        margin-left: 1.75rem;
+                        &:hover{
+                            outline: none;
+                            color: color(orange);
+                            transition: ease .2s;
+                        }
+                    }
+                }
+            }
+        }
+    
+    }
+}
+footer{
+    .container-wrapper{
+        @include respond-above(xlgr){
+            padding-left:0;
+            padding-right:0;
+        }
+    }
+}

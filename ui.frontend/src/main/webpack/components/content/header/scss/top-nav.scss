@@ -1,0 +1,117 @@
+.topNav{
+    background-color:color(darknavyblue);
+        .topNav__container{
+            display: flex;
+            margin: 0 auto;
+            flex-direction: row;
+            padding: 0.5rem 0;
+            .topNav__userContainer{
+                display:inline-block;
+                color: color(white);
+                width: 100%;
+                @include respond-above(md){
+                    width:50%;
+                }
+                .topNav__user{
+                    .topNav__userName{
+                        text-decoration: none;
+                        color: color(white);
+                        font-size: fsize(16);
+                        transition: .4s ease;
+                        .topNav__name{
+                            margin: 0;
+                            line-height: 0;
+                            display: inline-block;
+                            color: color(white);
+                        }
+                        .topNav__arrow{
+                            width:13px;
+                            height:13px;
+                            display:inline-block;
+                            position:relative;
+                            transition:0.4s ease;
+                            bottom:-5px;
+                            left:4px;
+                            transform: rotate(45deg);
+                            margin:0 1.5rem 0 0.5rem;
+                            &::before{
+                                position:absolute;
+                                content:"";
+                                display: inline-block;
+                                width:12px;
+                                height:3px;
+                                background-color:color(white);
+                                transition:0.4s ease;
+                            }&::after{                                
+                                transform:rotate(90deg);
+                                top:-5px;
+                                left:5px;
+                                position:absolute;
+                                content:"";
+                                display: inline-block;
+                                width:12px;
+                                height:3px;
+                                background-color:color(white);
+                                transition:0.4s ease;
+                            }
+                        }.topNav__arrow-active{
+                            transform: rotate(45deg) translate(-5px, -5px);
+                            &::before{
+                                transform:translate(10px, 0);
+                            }&::after{
+                                transform: rotate(90deg) translate(10px, 0px);
+                            }
+                         }
+                    }
+                    .topNav__notification{
+                        text-decoration: none;
+                        color: color(white);
+                        background-color: color(grey4);
+                        padding: 0.1rem 0.5rem;
+                        border-radius: 10px;
+                        border: 1px solid color(grey4);
+                        font-size:fsize(16);
+                         transition: ease .2s;
+                    }.active{
+                        background-color: color(pink);
+                         transition: ease .2s;
+                    }
+                }
+            }
+            .topNav__links{
+                display:none;
+                    @include respond-above(md){
+                    width: 50%;
+                    display: flex;
+                    justify-content: flex-end;
+                    }
+                    .topNav__linksList{
+                        .topNav__listItems{
+                            display: inline-block;
+                            border-right: 1px solid color(white);
+                            border-right-width: 2px;
+                            &:hover{
+                                border-color: color(orange);
+                                transition: ease .2s;
+                            }
+                            &:last-child{
+                                border-right: none;
+                                padding: 0;
+                            }
+                            .topNav__listLink{
+                                text-decoration: none;
+                                color: color(white);
+                                font-size: fsize(14);
+                                padding:0.2rem 1rem 0.2rem 1rem;
+                                &:hover{
+                                    outline: none;
+                                    color: color(orange);
+                                    transition: ease .2s;
+                                }
+                            }
+                        }
+                    }        
+                }
+        }
+        
+    }   

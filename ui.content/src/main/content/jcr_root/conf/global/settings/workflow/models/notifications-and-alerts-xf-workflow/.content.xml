@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/libs/settings/wcm/designs/default"
+        cq:lastModified="{Date}2023-02-13T12:31:21.638+05:30"
+        cq:lastModifiedBy="admin"
+        cq:template="/libs/cq/workflow/templates/model"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Notifications and Alerts XF Workflow"
+        sling:resourceType="cq/workflow/components/pages/model"
+        lastSynced="{Date}2022-12-21T13:10:42.976+05:30">
+        <flow
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/parsys">
+            <participant
+                jcr:created="{Date}2022-12-20T10:38:49.451+05:30"
+                jcr:createdBy="admin"
+                jcr:description="DPSS Alerts and Notifications Approval"
+                jcr:lastModified="{Date}2023-01-14T15:54:39.547+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="DPSS Alerts and Notifications"
+                sling:resourceType="cq/workflow/components/model/participant">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    DO_NOTIFY="true"
+                    PARTICIPANT="administrators"/>
+            </participant>
+            <or
+                jcr:created="{Date}2023-02-13T12:28:54.697+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2023-02-13T12:29:47.512+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Approver Step"
+                sling:resourceType="cq/workflow/components/model/or"
+                branches="2"
+                branchName1="[Approve,Approve]"
+                branchName2="[Deny,Deny]"
+                branchOrder="[0,1]"
+                orSplit="true">
+                <_x0031_
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="cq/flow/components/parsys">
+                    <process_copy
+                        jcr:created="{Date}2022-12-20T10:59:12.078+05:30"
+                        jcr:createdBy="admin"
+                        jcr:description="Activate XF  Process"
+                        jcr:lastModified="{Date}2022-12-21T12:30:24.642+05:30"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="DPSS Activate XF"
+                        sling:resourceType="cq/workflow/components/model/process">
+                        <metaData
+                            jcr:primaryType="nt:unstructured"
+                            PROCESS="com.day.cq.wcm.workflow.process.ActivatePageProcess"
+                            PROCESS_AUTO_ADVANCE="true"/>
+                    </process_copy>
+                    <process_680955927
+                        jcr:created="{Date}2022-12-21T12:10:52.137+05:30"
+                        jcr:createdBy="admin"
+                        jcr:description="set the DPSS Replicated by property"
+                        jcr:lastModified="{Date}2023-02-09T12:19:38.033+05:30"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="DPSS Replicated by"
+                        sling:resourceType="cq/workflow/components/model/process">
+                        <metaData
+                            jcr:primaryType="nt:unstructured"
+                            PROCESS="com.adobe.acs.commons.replication.status.impl.ReplicatedByWorkflowProcess"
+                            PROCESS_AUTO_ADVANCE="true"/>
+                    </process_680955927>
+                    <participant_11729378
+                        jcr:created="{Date}2022-12-21T13:09:44.981+05:30"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2023-01-14T15:54:50.645+05:30"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="DPSS Notification to Initiator"
+                        sling:resourceType="cq/workflow/components/model/participant">
+                        <metaData
+                            jcr:primaryType="nt:unstructured"
+                            DO_NOTIFY="true"
+                            PARTICIPANT="administrators"/>
+                    </participant_11729378>
+                </_x0031_>
+                <_x0032_
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="cq/flow/components/parsys">
+                    <participant_11729378
+                        jcr:created="{Date}2022-12-21T13:09:44.981+05:30"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2023-01-14T15:54:50.645+05:30"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="DPSS Notification to Initiator"
+                        sling:resourceType="cq/workflow/components/model/participant">
+                        <metaData
+                            jcr:primaryType="nt:unstructured"
+                            DO_NOTIFY="true"
+                            PARTICIPANT="administrators"/>
+                    </participant_11729378>
+                </_x0032_>
+            </or>
+        </flow>
+    </jcr:content>
+</jcr:root>

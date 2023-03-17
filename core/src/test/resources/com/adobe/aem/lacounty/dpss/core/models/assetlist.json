@@ -1,0 +1,18 @@
+{"assetlist":{
+  "jcr:primaryType": "nt:unstructured",
+  "jcr:createdBy": "admin",
+  "jcr:lastModifiedBy": "admin",
+  "viewmorelabel": "More",
+  "resultLimit": "30",
+  "jcr:created": "Thu Nov 17 2022 15:02:16 GMT+0530",
+  "viewallpagepath": "/content/dpss/en/homepage",
+  "jcr:lastModified": "Thu Nov 24 2022 18:20:20 GMT+0530",
+  "pathexplorer": "/content/dam/dpss/card-images",
+  "sling:resourceType": "dpss/components/content/assetlist",
+  "viewalllabel": "View All",
+  "viewlesslabel": "Less",
+  "fallback": "fallback message"
+  }
+  }
+  
+  

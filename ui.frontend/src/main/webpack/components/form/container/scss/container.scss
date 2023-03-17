@@ -1,0 +1,74 @@
+.cmp-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0.9375rem 0;
+    .text{  
+        width: 100%;
+        margin-bottom: 1rem;
+        display: inline-block;  
+    }
+    .cmp-form-text{
+        padding: 0;
+        @include respond-above(sm){
+            padding: 0 30px 0 0;
+        }
+        label{
+            font-weight: fweight(600);
+            margin-bottom: 0.9375rem;
+            display: block;
+            font-size: fsize(16);
+        }
+        input{
+            margin-bottom: .9375rem;
+            font-size: fsize(16); 
+            &.cmp-form-text__text{
+                display: block;
+                width: 100%;
+                padding: 0.9375rem;
+                line-height: 1.5;
+                color: color(grey5);
+                background-color: color(white);
+                background-clip: padding-box;
+                border: 1px solid color(grey4);
+                border-radius: 0;
+                transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+                margin-bottom: 10px;                                         
+            }
+            &:focus{
+                background-color: color(white);
+                transition: 0.4s ease;
+                &::placeholder{
+                    color:transparent;
+                    transition:0.4s ease;
+                }
+             } 
+            &:focus-visible{
+                outline: 1px solid color(black);
+            }
+        }
+        textarea{
+            margin-bottom: .9375rem;
+            font-size: fsize(16);
+            font-family: inherit;
+            &.cmp-form-text__textarea{
+                width: 100%;
+                padding: 0.625rem;
+            } 
+        }                            
+    } 
+    .options{      
+            padding: 0;
+            @include respond-above(sm){
+                padding: 0 30px 0 0;
+            } 
+            label{
+                &.cmp-form-options__label{
+                font-weight: fweight(600);
+                margin-bottom: 0.9375rem;
+                display: block;
+                font-size: fsize(16);
+                }
+            }       
+        }
+}

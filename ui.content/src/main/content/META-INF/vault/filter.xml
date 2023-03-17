@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+	<filter root="/conf/dpss" />
+	<filter root="/content/experience-fragments" />
+	<filter root="/content/dam/dpss/content-fragments" />
+	<filter root="/conf/global/settings/mailer" />
+	<filter
+		root="/conf/global/settings/workflow/models/dpss_request_for_deletion" />
+	<filter
+		root="/conf/global/settings/workflow/models/dpss-epolicy-request-for-deletion" />
+	<filter
+		root="/conf/global/settings/workflow/models/notifications-and-alerts-xf-workflow"  />
+	<filter
+		root="/conf/global/settings/dam/adminui-extension/metadataschema/DPSSIntranet" />
+	<filter
+		root="/conf/global/settings/workflow/models/content-review-for-publication" />
+	<filter
+		root="/conf/global/settings/workflow/models/dpss-epolicy-content-review-for-publication" />
+	<filter
+		root="/conf/global/settings/workflow/models/dpss-reindexing" />
+	<filter root="/var/workflow/models/dpss_request_for_deletion" />
+	<filter
+		root="/var/workflow/models/dpss-epolicy-request-for-deletion" />
+	<filter
+		root="/var/workflow/models/notifications-and-alerts-xf-workflow" />
+	<filter
+		root="/var/workflow/models/content-review-for-publication" />
+	<filter
+		root="/var/workflow/models/dpss-epolicy-content-review-for-publication" />
+	<filter root="/var/workflow/models/dpss-reindexing"  />
+	<filter
+		root="/conf/global/settings/workflow/models/000rossdeploymenttest" />
+	<filter root="/var/workflow/models/000rossdeploymenttest" />
+</workspaceFilter>

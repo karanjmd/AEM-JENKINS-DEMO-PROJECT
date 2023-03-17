@@ -1,0 +1,49 @@
+{
+	"filter": {
+		"jcr:primaryType": "nt:unstructured",
+		"jcr:createdBy": "admin",
+		"resetLabel": "Reset",
+		"jcr:lastModifiedBy": "admin",
+		"jcr:created": "Wed Jul 27 2022 13:35:02 GMT+0530",
+		"jcr:lastModified": "Wed Jul 27 2022 13:36:14 GMT+0530",
+		"sling:resourceType": "dpss/components/content/searchfilter",
+		"filterSection": "Header ",
+		"filters": {
+			"jcr:primaryType": "nt:unstructured",
+			"item0": {
+				"jcr:primaryType": "nt:unstructured",
+				"filterType": "filter1",
+				"filterList": {
+					"jcr:primaryType": "nt:unstructured",
+					"item0": {
+						"jcr:primaryType": "nt:unstructured",
+						"filterName": "filterA",
+						"filterValue": "filterValueA"
+					},
+					"item1": {
+						"jcr:primaryType": "nt:unstructured",
+						"filterName": "filterB",
+						"filterValue": "filterValueB"
+					}
+				}
+			},
+			"item1": {
+				"jcr:primaryType": "nt:unstructured",
+				"filterType": "filter2",
+				"filterList": {
+					"jcr:primaryType": "nt:unstructured",
+					"item0": {
+						"jcr:primaryType": "nt:unstructured",
+						"filterName": "filterAA",
+						"filterValue": "filterValueAA"
+					},
+					"item1": {
+						"jcr:primaryType": "nt:unstructured",
+						"filterName": "filterbb",
+						"filterValue": "filterValuevv"
+					}
+				}
+			}
+		}
+	}
+}

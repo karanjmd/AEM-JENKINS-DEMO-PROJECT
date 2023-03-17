@@ -1,0 +1,72 @@
+{
+  "errorpage": {
+    "Homepage": {
+      "jcr:primaryType": "cq:Page",
+      "jcr:createdBy": "admin",
+      "jcr:created": "Thu Jul 21 2022 11:01:58 GMT+0530",
+      "jcr:content": {
+        "jcr:primaryType": "cq:PageContent",
+        "jcr:mixinTypes": [
+          "mix:versionable"
+        ],
+        "jcr:createdBy": "admin",
+        "jcr:title": "Homepage",
+        "cq:lastReplicationAction": "Activate",
+        "jcr:versionHistory": "e1589588-f2c3-436f-9be4-95b4464aa15e",
+        "cq:template": "/conf/dpss/settings/wcm/templates/home-page",
+        "cq:lastReplicatedBy": "admin",
+        "jcr:predecessors": [
+          "d3e574ca-58e8-4877-bf73-b8db41a081f8"
+        ],
+        "jcr:created": "Thu Jul 21 2022 11:01:58 GMT+0530",
+        "cq:lastReplicated": "Fri Jul 01 2022 18:43:25 GMT+0530",
+        "cq:lastModified": "Fri Jul 01 2022 20:12:35 GMT+0530",
+        "jcr:baseVersion": "d3e574ca-58e8-4877-bf73-b8db41a081f8",
+        "jcr:isCheckedOut": true,
+        "jcr:uuid": "d5cc2206-70a7-424c-a73b-21503ec1e03c",
+        "sling:resourceType": "dpss/components/structure/home-page",
+        "cq:lastModifiedBy": "admin"
+      },
+      "Error": {
+        "jcr:primaryType": "cq:Page",
+        "jcr:createdBy": "admin",
+        "jcr:created": "Thu Jul 21 2022 11:01:58 GMT+0530"
+      },
+      "web-form": {
+        "jcr:primaryType": "cq:Page",
+        "jcr:createdBy": "admin",
+        "jcr:created": "Thu Jul 21 2022 11:01:58 GMT+0530"
+      },
+      "calendar": {
+        "jcr:primaryType": "cq:Page",
+        "jcr:createdBy": "admin",
+        "jcr:created": "Thu Jul 21 2022 11:01:58 GMT+0530"
+      },
+      "resources": {
+        "jcr:primaryType": "cq:Page",
+        "jcr:createdBy": "admin",
+        "jcr:created": "Thu Jul 21 2022 11:01:58 GMT+0530"
+      },
+      "sites": {
+        "jcr:primaryType": "cq:Page",
+        "jcr:createdBy": "admin",
+        "jcr:created": "Thu Jul 21 2022 11:01:58 GMT+0530"
+      },
+      "ResultPage": {
+        "jcr:primaryType": "cq:Page",
+        "jcr:createdBy": "admin",
+        "jcr:created": "Thu Jul 21 2022 11:01:58 GMT+0530"
+      },
+      "DetailPage": {
+        "jcr:primaryType": "cq:Page",
+        "jcr:createdBy": "admin",
+        "jcr:created": "Thu Jul 21 2022 11:01:58 GMT+0530"
+      },
+      "aboutdpss": {
+        "jcr:primaryType": "cq:Page",
+        "jcr:createdBy": "admin",
+        "jcr:created": "Thu Jul 21 2022 11:01:58 GMT+0530"
+      }
+    }
+  }
+}

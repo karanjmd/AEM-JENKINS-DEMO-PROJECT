@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Form Upload "
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                maximized="{Boolean}true">
+                <items jcr:primaryType="nt:unstructured">
+                    <upload-image
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Upload Image"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <logo
+                                jcr:description="Maximum size limit is 20 MB"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                                allowUpload="{Boolean}true"
+                                autoStart="{Boolean}false"
+                                class="cq-droptarget"
+                                fieldDescription="Maximum size limit is 20 MB"
+                                fieldLabel="File"
+                                fileNameParameter="./fileName"
+                                fileReferenceParameter="./logo"
+                                mimeTypes="[image/gif,image/jpeg,image/png,image/webp,image/tiff,image/svg+xml,application/pdf]"
+                                multiple="{Boolean}true"
+                                name="./file"
+                                sizeLimit="{Long}20000000"
+                                title="Upload Image Asset"
+                                uploadUrl="${suffix.path}"
+                                useHTML5="{Boolean}true"/>
+                        </items>
+                    </upload-image>
+                    <file-path
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="File Path"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <location
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                fieldDescription="Search the path of the folder"
+                                fieldLabel="Search Folder Path"
+                                name="./galleryLocation"
+                                rootPath="/content/dam"/>
+                            <foldername
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldDescription="Folder Name"
+                                fieldLabel="Folder Name"
+                                name="./folderName"/>
+                        </items>
+                    </file-path>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

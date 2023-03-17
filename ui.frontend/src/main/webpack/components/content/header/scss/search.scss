@@ -1,0 +1,151 @@
+/*********SEARCH******************/
+.mainNav__searchContainer{
+    display: inline-block;
+    list-style: none;
+    @include respond-above(md){
+        flex-grow: 1;
+        margin: 0rem 1.5rem 0rem auto;
+        max-width: 33.5rem;
+    }
+
+    .mainNav__searchItem{
+        width:100%;
+        padding: 1rem 2rem 1rem 0.9rem;
+        @include respond-above(md){ 
+            padding:0rem;
+        }
+        .mainNav__form{
+            padding: 0;
+            transition:0.4s ease;
+            @include respond-above(md){   
+                border: 1px solid color(grey4);                                 
+                display: flex;
+                align-items: center;
+            }
+            .mainNav__dropdown{              
+                position:relative;
+                box-sizing:border-box;
+                background-color:color(white);
+                transition:0.4s ease;
+                cursor:pointer;
+                @include respond-above(md) { 
+                    flex: 0 0 36.5%;
+                }
+                @include respond-above(lgr) {
+                    flex: 0 0 31.5%;
+                }
+                &::after{
+                    content: "";
+                    position: absolute;
+                    border-left: 1px solid color(grey4);
+                    border-bottom: 1px solid color(grey4);
+                    height: 7px;
+                    width: 7px;
+                    display: block;
+                    transform: rotate(-45deg);
+                    margin-top: 0px;
+                    border-width: 2px;
+                    top: 32%;
+                    transition: .4s ease;
+                    z-index:1;
+                    right: 1.25rem;
+                    @include respond-above(md) {
+                        top: 38%;
+                    }
+                }
+                .mainNav__select{                   
+                    font-size:fsize(16);
+                    color:color(grey4);
+                    font-weight:400;
+                    max-width:100%;
+                    padding:1rem 2rem 1rem 1rem;
+                    margin-bottom:1rem;
+                    background-color: color(grey1);
+                    border: 1px solid color(grey4);
+                    text-overflow: ellipsis;
+                    padding-right:30px !important;
+                    transition:0.4s ease;
+                    cursor:pointer;
+                    width:100%;
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    appearance:none;
+                    @include respond-above(sm){
+                        font-size:fsize(18);
+                    }
+                    @include respond-above(md){
+                        background-color: color(white);
+                        border: 0;
+                        border-right: 1px solid color(grey4);
+                        font-size:fsize(16);
+                        padding: 0.813rem 0.875rem 0.813rem 0.875rem;
+                        margin-bottom:0;
+                        line-height: 1.375rem;
+                    }
+                    &:active, &:focus{
+                        box-shadow:none;
+                    }
+                }
+            }
+            .mainNav__search{
+                width:100%;
+                position: relative;
+                border: 0;
+                background-color: color(white);
+                @include respond-above(md){
+                    padding: 0.813rem 3rem 0.813rem 2.25rem;
+                    font-size: fsize(16);
+                    width: 100%;
+                    line-height: 1.375rem;
+                }
+                .mainNav__searchBar{
+                    padding: 1rem 2.5rem 1rem 1rem;
+                    margin:0;
+                    border-radius:0;
+                    border: 1px solid color(grey4);
+                    background-color: color(white);
+                    transition: 0.4s ease;
+                    width:100%;
+                     &:focus{
+                        background-color: color(white);
+                        transition: 0.4s ease;
+                        &::placeholder{
+                            color:transparent;
+                            transition:0.4s ease;
+                        }
+                     }                     
+                    @include respond-above(sm){
+                        font-size:fsize(18);
+                        width:100%;
+                    }
+                    @include respond-above(md){
+                        border: 0;
+                        font-size: fsize(16);
+                        line-height: 1.375rem;
+                        padding: 0;
+                    }
+                }
+                .mainNav__searchIcon{
+                    position: absolute;
+                    right: 0.875rem;
+                    top: 0.875rem;
+                    font-size: fsize(20);
+                    color: color(grey4);
+                    background: transparent;
+                    border: 0;
+                    padding: 0;
+                    &:focus{
+                        background-color: color(white);
+                        transition: 0.4s ease;                       
+                    } 
+                    @include respond-above(md){
+                        right: 1rem;
+                        top: 0.75rem;
+                        font-size: fsize(24);
+                    }
+                  
+                }
+            }
+        }
+    }
+}

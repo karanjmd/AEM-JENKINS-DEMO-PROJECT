@@ -1,0 +1,16 @@
+{"events":{
+  "jcr:primaryType": "nt:unstructured",
+  "startDate": "Sat Aug 06 2022 15:55:00 GMT+0530",
+  "jcr:createdBy": "admin",
+  "endDate": "Sun Aug 07 2022 15:55:00 GMT+0530",
+  "jcr:lastModifiedBy": "admin",
+  "jcr:created": "Tue Aug 02 2022 15:55:01 GMT+0530",
+  "cq:tags": ["core-components-examples:region/north-america"],
+  "jcr:lastModified": "Tue Aug 02 2022 15:56:55 GMT+0530",
+  "eventTitle": "Event Details",
+  "googleMapLinkText": "Test location",
+  "googleMapLink": "www.google.com",
+  "text":"Hello",
+  "sling:resourceType": "dpss/components/content/event-details"
+  }
+  }

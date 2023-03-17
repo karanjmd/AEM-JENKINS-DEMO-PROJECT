@@ -1,0 +1,50 @@
+<div data-sly-test="${wcmmode.edit}" class="cq-placeholder" data-emptytext=""></div>
+<div data-sly-use.accordion="com.adobe.cq.wcm.core.components.models.Accordion"	data-cmp-is="accordion"
+	data-cmp-single-expansion="${accordion.singleExpansion}" id="${currentNode.parent.parent.name}-${currentNode.parent.name}-${currentNode.name}" class="accordion-container">
+	<div class="title__img__list" data-sly-test="${properties.customTitle}">
+   		<div class="offsetB15 heading--large">${properties.customTitle @ context='html'}</div>
+	</div>
+	<div data-sly-test="${accordion.items.size > 0}" data-sly-repeat.item="${accordion.items}" data-cmp-hook-accordion="item" class="accordion-card faq__accordion"
+		data-cmp-expanded="${item.name in accordion.expandedItems}">
+		<div class="accordion-card__header icon__bg--lighter-blue ${item.name in accordion.expandedItems ? 'active' : ''}" aria-expanded="${item.name in accordion.expandedItems ? 'true' : 'false'}">
+			<span class="accordion-card__header--iconLeft list__view--icon faq-accordion__content ${properties.fontAwesomeKey @ context='styleString'}"></span>
+			<div class="accordion-card__header--title" data-sly-test="${item.title}">
+            <h3 data-sly-element="${properties.headingSelection @ context='elementName'}"
+            class="cmp-accordion__header">
+				${item.title @ context='html'}</h3>
+			</div>
+			<div class="accordion-card__header--icon gutterAll15">
+				<button class="accordion-card__header--icon-btn"
+					aria-label="Expand Tile">
+					<i class="fa fa-plus-square"></i>
+					<i class="fa fa fa-chevron-right faq-accordion__content"></i>
+				</button>
+			</div>
+		</div>
+		<div class="${!wcmmode.edit ? 'accordion-card__content icon__bg--lighter-blue':''} ${item.name in accordion.expandedItems ? 'show' : ''}" style="max-height:${item.name in accordion.expandedItems ? 'none':'' @ context='styleString'}"
+			aria-hidden="${item.name in accordion.expandedItems ? 'false' : 'true'}" role="region" aria-label="Accordion Header">
+			<div class="accordion-card__header--iconLeft list__view--icon ${properties.fontAwesomeKey @ context='styleString'}"></div>
+			<div class="${!wcmmode.edit ? 'accordion-content__head':''}">
+				<div class="accordion-card__description">
+					<p class="accordion-card__description--para-full">
+						<div data-sly-resource="${item.name @ decorationTagName='div'}"	data-cmp-hook-accordion="panel"
+						class="cmp-accordion__panel${item.name in accordion.expandedItems ? ' cmp-accordion__panel--expanded' : ' cmp-accordion__panel--hidden'}"
+						role="region" aria-label="Accordion Content">
+						</div>
+					</p>
+				</div>
+				<div data-sly-test="${wcmmode.disabled}" class="accordion-card__header--icon gutterAll15">
+				<button class="accordion-card__header--icon-btn"
+					aria-label="Expand Tile">
+					<i class="fa fa-plus-square"></i>
+					<i class="fa fa fa-chevron-right faq-accordion__content"></i>
+				</button>
+			</div>
+			</div>
+		</div>
+	</div>
+	<sly
+		data-sly-resource="${resource.path @ resourceType='wcm/foundation/components/parsys/newpar', appendPath='/*', decorationTagName='div', cssClassName='new section aem-Grid-newComponent'}"
+		data-sly-test="${(wcmmode.edit || wcmmode.preview) && accordion.items.size < 1}"></sly>
+
+</div>

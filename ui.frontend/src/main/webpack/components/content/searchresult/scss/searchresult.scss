@@ -1,0 +1,241 @@
+.rsp-resultPage{
+
+}
+.rsp-resultView-wrapper{
+    display: flex;
+}
+.rsp-searchContainer{
+    width: 100%;
+    position: relative;
+    margin-right: 0.5rem;
+    @include respond-above(sm){
+        margin-right: 1.625rem;
+    }
+    .rsp-searchBar{
+        width: 100%;
+        padding: 1rem 0 1rem 1.5625rem;
+        border: 1px solid color(grey2);
+        margin: 0;
+        border-radius: 0;
+        background-color: color(white);
+        transition: 0.4s ease;
+        box-shadow: 0px 1px 3px color(boxShadow);
+        font-size: fsize(20);
+        &:focus{
+             &::placeholder{
+                color: transparent;
+                transition: 0.4s ease;
+            }
+        }
+    }
+    .rsp-searchIcon{
+        position: absolute;
+        right: 0rem;
+        top: 0rem;
+        font-size: fsize(22);
+        color: color(grey4);
+        background: color(white);
+        padding: 0.9375rem 1.25rem 0.9375rem 1.25rem;
+        border-radius: 0px;
+        border: 1px solid color(grey2);
+    }
+}
+.rsp-viewOptions{
+    display: flex;
+    align-items: center;
+    a{
+        font-size: fsize(24);
+        padding: 0.875rem;
+        text-decoration: none;
+        color: color(grey4);
+        transition: 0.4s ease;
+        display: none;
+        @include respond-above(sm){
+            display: block;
+        }
+        &:hover, &:active{ 
+            background-color: color(indigoblue);
+            color: color(white);
+        }
+    }
+    .rsp-mobFilter{
+        display: block;
+        padding: 0.875rem;
+        border: 1px solid color(grey2);
+        color: color(grey4);
+        font-size: fsize(24);
+        @include respond-above(sm){
+            display: none;
+        }
+    }
+}
+.rsp-countFilterWrapper{
+    display: flex;
+    margin: 0.8125rem 0 1.4375rem 0; 
+    justify-content: space-between;
+        align-items: center;
+    @include respond-above(sm){
+        
+    } 
+    .rsp-resultCount{
+        width: auto;
+        font-size: fsize(24);
+        font-weight: fweight(600);
+        color: color(grey4);
+        text-transform: uppercase;
+        // @include respond-above(sm){
+        //     width: 85%;
+        // }
+    }
+    .rsp-resultDisplayed{
+        font-size: fsize(16);
+        color: color(grey4);
+        font-weight: fweight(400);
+        margin-left: 0.4375rem;
+        display: none;
+        @include respond-above(sm){
+            display: inline-block;
+            margin-right: auto;
+        }
+    }
+    .rsp-resultFilters{
+        display: flex;              
+        font-weight: fweight(400); 
+        .rsp-resultFilterWrap{
+            position: relative;
+            select{
+                appearance: none;
+                border: none;
+                cursor: pointer;
+                margin-left: 1.375rem;
+                color: color(grey4);
+                font-size: fsize(16); 
+                &:focus-visible{
+                    outline: none;
+                }
+                &.rsp-sortBy{
+                    width: 4.4375rem;
+                }
+                &.rsp-direction{
+                    width: 5.4rem;
+                }
+            }
+            i{
+                position: absolute;
+                right: 0;
+            }
+        }
+    }
+}
+.rsp-resultsContainer{
+    &.result-listView{       
+        .rsp-resultCard{
+          // display: flex;      
+          display: none;      
+            border-bottom: 1px solid color(grey2);
+            padding-bottom: 1.8125rem;
+            margin-bottom: 1.25rem;
+            .rsp-resultImg{
+                width: auto;
+                margin-right: 1.5rem;
+                img{
+                    width: 5.5625rem;
+                    height: 5.5625rem;
+                    object-fit: cover;
+                }
+            }
+            .rsp-resultDetail{
+                width: 90%;
+                h2{
+                    margin: 0;
+                    font-weight: fweight(600);
+                    font-size: fsize(20);
+                    color: color(blue);
+                    a{
+                        text-decoration: none;
+                    }
+                }
+                p{
+                    font-size: fsize(16);
+                    color: color(grey4);
+                    margin: 18px 0 0 0;
+                    display: none;
+                    @include respond-above(sm){
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.rsp-resultsContainer{
+    &.result-gridView{        
+        flex-wrap: wrap;
+        display: none;
+        margin: 0;
+        @include respond-above(sm){
+            display: flex;
+            margin: -14px;
+        }
+        @include respond-above(md){
+            margin: -23px -15px;
+        }
+        .rsp-resultCard{  
+             display: none;         
+            width: 29.6%;
+            margin-bottom: 2.875rem;
+            box-shadow: 0px 1px 3px color(boxShadow);
+            border: 1px solid color(grey2);
+            background-color: color(white);
+            flex-direction: column;
+            @include respond-above(sm){
+                margin: 14px;
+            }
+            @include respond-above(md){
+                margin: 23px 15px;
+            }
+            .rsp-resultImg{
+                height: 157px;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            .rsp-resultDetail{
+                padding: 1.4375rem 1.5625rem;
+                min-height: 99px;
+                h2{
+                    display: inline-block;
+                    font-size: fsize(20);
+                    margin: 0;
+                    a{
+                        text-decoration: none;
+                    }
+                }
+                p{
+                    display: none;
+                }
+            }
+        }
+    }
+}
+.rsp-loadMore, #loadResults{
+    display: none;
+    border: 3px solid color(blue);
+    padding: 16px;
+    text-align: center;
+    text-transform: uppercase;
+    color: color(blue);
+    font-weight: fweight(800);
+    cursor: pointer;
+    margin-top: 3rem;
+    a{
+        text-decoration: none;
+        text-transform: uppercase;
+        color: color(blue);
+        font-weight: fweight(800);
+        display: block;
+    }
+}

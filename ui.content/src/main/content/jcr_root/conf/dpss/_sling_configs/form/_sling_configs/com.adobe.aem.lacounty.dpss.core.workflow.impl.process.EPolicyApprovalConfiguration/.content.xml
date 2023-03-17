@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    branch="[\0]"
+    bureau="[\0]"
+    clientId="8a0fd95d57dd4e29a1fcdc1db27e5c49"
+    contributors=""
+    division="[gain-1-program-approvers,gr-and-calfresh-approvers]"
+    reviewers="[gain-1-reviewers,gain-2-reviewers,calfresh-reviewers]"
+    section="[gain-1-approvers,gain-2-approvers,calfresh-approvers]"/>

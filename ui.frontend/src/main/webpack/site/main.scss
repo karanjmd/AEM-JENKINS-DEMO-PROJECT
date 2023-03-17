@@ -1,0 +1,13 @@
+@import "../base/sass/shared";
+@import "../base/sass/common";
+@import "../base/sass/variables";
+@import "../base/sass/breakpoints";
+@import "../base/sass/mixins";
+@import "../base/sass/fonts/brands.scss";
+@import "../base/sass/fonts/fontawesome.scss";
+@import "../base/sass/fonts/regular.scss";
+@import "../base/sass/fonts/solid.scss";
+@import "../base/sass/fonts/v4-shims.scss";
+@import "../components/**/**/**/*.scss";
+@import "./node_modules/photoswipe/dist/photoswipe";
+@import "./node_modules/photoswipe-dynamic-caption-plugin/photoswipe-dynamic-caption-plugin";

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:rep="internal"
+    jcr:mixinTypes="[rep:AccessControllable]"
+    jcr:primaryType="sling:OrderedFolder">
+    <rep:policy/>
+    <DPSS_News_x0040_2x.png/>
+    <jcr:content/>
+    <asset.jpg/>
+    <seal.png/>
+    <seal_x0040_2x.png/>
+    <rifqi-ali-ridho-449445-unsplash.png/>
+    <rifqi-ali-ridho-449445-unsplash_x0040_2x.png/>
+    <viviana-rishe-UC8fvOyG5pU-unsplash.png/>
+    <viviana-rishe-UC8fvOyG5pU-unsplash_x0040_2x.png/>
+    <burst-kUqqaRjJuw0-unsplash.png/>
+    <DPSS-logo.png/>
+    <dpss-logo.svg/>
+    <content-fragments/>
+</jcr:root>

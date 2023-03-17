@@ -1,0 +1,40 @@
+<sly data-sly-use.searchFilter="com.adobe.aem.lacounty.dpss.core.models.SearchFilterModel"/>
+<div class="left-section">
+  <div class="cmp-container">
+    <div class="side-container">
+      <div class="side-filter--wrapper">
+        <div class="side-filter--close">x</div>
+        <h2>${searchFilter.filterSection}
+        </h2>
+        <div class="filter-options">
+          <div class="filter-opt--list" data-sly-list="${searchFilter.getFilters}">
+
+              <div class="filter-opt--title"> ${item.filterType} 
+                <span class="filter-opt--arrow">
+                </span>
+              </div>
+            
+            <ul class="filter-opt--list" data-sly-list="${item.getFilterList}">
+              <li class="filter-opt--item">
+                <input type="checkbox" value="${item.getFilterValue}" id="${item.getFilterId}" class="filter-checkbox">
+                <label for="${item.getFilterId}">${item.getFilterName}
+                </label>
+              </li>
+            </ul>
+		  	 <sly data-sly-test ="${itemList.count ==1}">
+            <div class="filterurl">
+              <a  id="${searchFilter.getExtSearchLink}" class="search-site-url" target="_blank">
+                ${searchFilter.getExtSearchTitle}
+              </a>
+            </div>
+            </sly>
+          </div>
+        </div>
+        <div class="fiter-opt--reset">
+          <a href="#">${searchFilter.resetLabel}
+          </a>
+        </div>
+      </div>
+    </div>                                    
+  </div>                                
+</div>

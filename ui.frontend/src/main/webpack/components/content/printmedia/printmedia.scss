@@ -1,0 +1,26 @@
+@media print {
+	
+    header {
+        display: none;
+
+    }
+
+    .megamenu {
+        display: none;
+    }
+
+
+    .sidebar-dpss{
+        display: none;
+        }
+
+
+    .breadcrumb {
+        display: none;
+    }
+
+    .footer {
+        display: none;
+    }
+    
+}

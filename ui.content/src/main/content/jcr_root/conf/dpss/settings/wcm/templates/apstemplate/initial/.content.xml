@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2022-12-04T22:06:29.062+05:30"
+        cq:lastModifiedBy="admin"
+        cq:template="/conf/dpss/settings/wcm/templates/apstemplate"
+        jcr:primaryType="cq:PageContent"
+        sling:resourceType="dpss/components/structure/page">
+        <root
+            jcr:lastModified="{Date}2022-07-15T14:51:34.556+05:30"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid jcr:primaryType="nt:unstructured">
+                <container jcr:primaryType="nt:unstructured">
+                    <layoutcontainer
+                        cq:styleIds="[1669617352481]"
+                        jcr:created="{Date}2022-11-29T13:02:40.016+05:30"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2022-12-14T21:07:15.674+05:30"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="dpss/components/content/layoutContainer">
+                        <layoutcontainer
+                            jcr:created="{Date}2022-12-14T21:08:24.638+05:30"
+                            jcr:createdBy="admin"
+                            jcr:lastModified="{Date}2022-12-15T09:11:13.482+05:30"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="dpss/components/content/layoutContainer"
+                            layout="responsiveGrid"/>
+                    </layoutcontainer>
+                    <layoutcontainer_1449985903
+                        jcr:created="{Date}2022-11-29T13:02:51.816+05:30"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2022-12-15T09:09:39.298+05:30"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="dpss/components/content/layoutContainer"
+                        layout="responsiveGrid"/>
+                </container>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+</jcr:root>

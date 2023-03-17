@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:isCheckedOut="{Boolean}true"
+    jcr:mixinTypes="[mix:referenceable,mix:versionable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="23c0f167-217e-48d4-95c2-87d90568f35c">
+    <jcr:content
+        cq:name="test-fragment"
+        cq:parentPath="/content/dam/dpss/content-fragments"
+        jcr:description="For Testing the Model Created"
+        jcr:lastModified="{Date}2022-11-11T09:05:25.973+05:30"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="dam:AssetContent"
+        jcr:title="Test Fragment"
+        contentFragment="{Boolean}true"
+        lastFragmentSave="{Date}2022-11-11T09:05:25.973+05:30">
+        <data
+            cq:model="/conf/dpss/settings/dam/cfm/models/simple-content-fragment"
+            jcr:primaryType="nt:unstructured">
+            <master
+                jcr:mixinTypes="[cq:Taggable,dam:cfVariationNode]"
+                jcr:primaryType="nt:unstructured"
+                textArea="&lt;p>This is Content Fragment&lt;/p>&#xa;"
+                textArea_x0040_ContentType="text/html"
+                textArea_x0040_LastModified="{Date}2022-11-11T09:05:25.886+05:30"/>
+        </data>
+        <metadata
+            jcr:mixinTypes="[cq:Taggable]"
+            jcr:primaryType="nt:unstructured"/>
+        <related jcr:primaryType="nt:unstructured"/>
+        <usages
+            dam:score="{Long}2"
+            jcr:primaryType="nt:unstructured"
+            usedBy="[aem]">
+            <aem
+                jcr:primaryType="nt:unstructured"
+                count="{Long}2"
+                lastUsed="{Date}2022-11-11T09:12:47.129+05:30"/>
+        </usages>
+    </jcr:content>
+</jcr:root>

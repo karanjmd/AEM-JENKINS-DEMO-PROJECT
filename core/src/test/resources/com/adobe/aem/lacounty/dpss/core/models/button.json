@@ -1,0 +1,27 @@
+{
+	"button": {
+		"jcr:primaryType": "nt:unstructured",
+		"jcr:createdBy": "admin",
+		"jcr:title": "Button",
+		"fontAwesomeKey": "fa fa-briefcase",
+		"jcr:lastModifiedBy": "admin",
+		"jcr:created": "Tue Jul 26 2022 12:52:12 GMT+0530",
+		"link": "/content/dpss/en/Homepage/DetailPage",
+		"jcr:lastModified": "Tue Jul 26 2022 13:03:22 GMT+0530",
+		"accessibilityLabel": "label",
+		"sling:resourceType": "dpss/components/content/button",
+		"openInTab": "true"
+	},
+	"no": {
+		"jcr:primaryType": "nt:unstructured",
+		"jcr:createdBy": "admin",
+		"jcr:title": "Button",
+		"fontAwesomeKey": "fa fa-briefcase",
+		"jcr:lastModifiedBy": "admin",
+		"jcr:created": "Tue Jul 26 2022 12:52:12 GMT+0530",
+		"link": "/content/dpss/en/Homepage/DetailPage",
+		"jcr:lastModified": "Tue Jul 26 2022 13:03:22 GMT+0530",
+		"accessibilityLabel": "label",
+		"sling:resourceType": "dpss/components/content/button"
+	}
+}

@@ -1,0 +1,48 @@
+<sly data-sly-use.uploadData="com.adobe.aem.lacounty.dpss.core.models.AssetListModel"/></sly>
+ASSET LIST
+<section class="dpssassetlist" data-show-more=${uploadData.viewmorelabel} data-show-less=${uploadData.viewlesslabel} data-max-items=${uploadData.resultLimit} data-request-uri=${uploadData.servletpath}>
+
+        <div class="assetlist__info">
+
+            <span class="assetlist__info--loader">Loading...</span>
+
+            <span class="assetlist__info--not-found is-hidden">${uploadData.fallback}</span>
+
+        </div>
+
+        <div class="assetlist__items">  
+
+        </div>
+
+        <div class="assetlist__items-more is-hidden">
+
+        </div>
+
+        <div class="showmore__border--btn">
+
+            <span></span>
+
+            <button class="accordion-card__showmore-btn">
+
+                <small class="more-text"></small>
+
+                <i class="fa fa-chevron-down" aria-hidden="true"></i>
+
+            </button>
+
+
+            <span></span>
+
+            </div>
+
+        <div class="showall__items is-hidden">
+
+            <a href="${uploadData.viewallpagepath}" class="showall__items--btn">${uploadData.viewalllabel}</a>
+
+        </div>
+
+
+    </section>
+
+
+

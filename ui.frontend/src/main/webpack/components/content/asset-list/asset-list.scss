@@ -1,0 +1,33 @@
+.assetlist {
+	 font-size: 1.5rem;
+	
+    .list-item{
+        color: color(transblue);
+        font-size: 1.25rem;
+        font-weight: 700;
+        display: block;
+        padding: .8rem 1.5625rem;
+        position: relative;
+        text-decoration: none;
+        &:hover {
+            outline: none;
+            color: color(orange);
+            transition: ease .2s;
+        }
+    }
+    .assetlist__info {
+        margin: 20px;
+        text-align: center;
+    }
+    .showall__items {
+        text-align: center;
+        .showall__items--btn {
+            color: color(transblue);
+            padding: 10px;
+            font-size: 1.125rem;
+            background: none;
+            display: inline-block;
+            margin: 10px;
+        }
+    } 
+}

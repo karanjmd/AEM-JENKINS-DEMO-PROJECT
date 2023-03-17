@@ -1,0 +1,16 @@
+{
+    "newsfeed": {
+        "jcr:primaryType": "nt:unstructured",
+        "jcr:createdBy": "admin",
+        "jcr:lastModifiedBy": "admin",
+        "viewAllLink": "/content/dpss/en/Homepage/ResultPage",
+        "jcr:created": "Thu Jul 21 2022 12:56:13 GMT+0530",
+        "bgImage": "/content/dam/dpss/burst-kUqqaRjJuw0-unsplash.png",
+        "title": "Homepage Newsfeed",
+        "linkAction": "_blank",
+        "jcr:lastModified": "Thu Jul 21 2022 12:57:11 GMT+0530",
+        "sling:resourceType": "dpss/components/content/homepage-newsfeed",
+        "listPath": "/content/dpss/en/Homepage/DetailPage",
+        "viewAllLabel": "newsfeed"
+    }
+}

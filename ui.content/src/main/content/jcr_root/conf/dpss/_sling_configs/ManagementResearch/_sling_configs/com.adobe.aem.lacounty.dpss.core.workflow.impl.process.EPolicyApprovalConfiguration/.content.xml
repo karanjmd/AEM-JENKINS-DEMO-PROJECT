@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    branch="[\0]"
+    bureau="[bso-approvers]"
+    clientId="8a0fd95d57dd4e29a1fcdc1db27e5c49"
+    division="[reqad-approvers]"
+    reviewers="[management-research-reviewers]"
+    section="[management-research-approvers]"/>

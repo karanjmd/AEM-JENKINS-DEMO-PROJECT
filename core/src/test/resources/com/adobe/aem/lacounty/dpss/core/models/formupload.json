@@ -1,0 +1,11 @@
+{
+    "formupload": {
+        "jcr:primaryType": "nt:unstructured",
+        "jcr:createdBy": "admin",
+        "jcr:lastModifiedBy": "admin",
+        "jcr:created": "Mon Aug 18 2022 09:08:33 GMT+0530",
+        "fileName": "assetupload.jpg",
+        "folderName": "image-gallery",
+        "galleryLocation": "/content/dam/dpss"
+    }
+}

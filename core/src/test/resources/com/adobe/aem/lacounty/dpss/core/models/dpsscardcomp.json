@@ -1,0 +1,22 @@
+{
+	"dpsscard": {
+		"jcr:primaryType": "nt:unstructured",
+		"jcr:createdBy": "admin",
+		"collapseLabel": "less",
+		"hideMore": "true",
+		"description": "<p>This is the card description</p>",
+		"cardSubtitle": "This is card-sub title",
+		"jcr:lastModifiedBy": "admin",
+		"expandLabel": "more",
+		"jcr:created": "Wed Jul 20 2022 20:58:28 GMT+0530",
+		"cardImage": "/content/dam/dpss/burst-kUqqaRjJuw0-unsplash.png",
+		"cardMobileImage": "/content/dam/dpss/burst-kUqqaRjJuw0-unsplash.png.transform/mobileTransformedCardImage/img.png",
+		"cardTabletImage": "/content/dam/dpss/burst-kUqqaRjJuw0-unsplash.png.transform/tabTransformedCardImage/img.png",
+		"cardTitle": "Card",
+		"jcr:lastModified": "Wed Jul 20 2022 20:59:56 GMT+0530",
+		"sling:resourceType": "dpss/components/content/card/v1/card",
+		"cardImageAltTxt": "Card Alt",
+		"areaLandmark":"abcd",
+		"textIsRich": "true"
+	}
+}

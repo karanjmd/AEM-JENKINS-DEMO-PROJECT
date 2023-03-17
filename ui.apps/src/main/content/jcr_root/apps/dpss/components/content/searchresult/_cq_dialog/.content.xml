@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Search Result"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        granite:class="cmp-form-textfield-editDialog"
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs">
+                <items jcr:primaryType="nt:unstructured">
+                    <tab1
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Search Bar"
+                        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <searchtext
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Search Place Holder Text"
+                                        fieldLabel="Search Place Holder"
+                                        name="./searchPlaceHolder"/>
+                                    <resultpage
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                        fieldDescription="Search result page path."
+                                        fieldLabel="Search Result Page"
+                                        name="./resultpage"
+                                        rootPath="/content/dpss"/>
+                                </items>
+                            </column>
+                        </items>
+                    </tab1>
+                    <tab2
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Search"
+                        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <resultsSize
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
+                                        fieldDescription="Maximal number of results fetched by a search request"
+                                        fieldLabel="Results Size"
+                                        min="1"
+                                        name="./resultsSize"
+                                        step="1"
+                                        value="10"/>
+                                    <showResultCount
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:hideResource="true"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                        checked="true"
+                                        fieldDescription="Display result count on page"
+                                        name="./showResultCount"
+                                        text="Show Result Count"
+                                        uncheckedValue="false"
+                                        value="{Boolean}true"/>
+                                </items>
+                            </column>
+                        </items>
+                    </tab2>
+                    <tab3
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Result"
+                        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <sortoptionlist
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                        composite="{Boolean}true"
+                                        fieldDescription="Sort Option List"
+                                        fieldLabel="Sort Option List"
+                                        required="{Boolean}false">
+                                        <field
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                                            emptyText="Option List"
+                                            name="./optionList">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <option
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    emptyText="Option"
+                                                    fieldDescription="Option"
+                                                    fieldLabel="Option Name"
+                                                    name="./option"/>
+                                                <optionvalue
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    emptyText="Option value"
+                                                    fieldDescription="Option value"
+                                                    fieldLabel="Option value"
+                                                    name="./optionValue"/>
+                                            </items>
+                                        </field>
+                                    </sortoptionlist>
+                                    <sortdirectionlist
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                        composite="{Boolean}true"
+                                        fieldDescription="Sort Direction List"
+                                        fieldLabel="Sort Direction List"
+                                        required="{Boolean}false">
+                                        <field
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                                            emptyText="Sort Direction List"
+                                            name="./sortDirectionList">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <sortdirection
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    emptyText="Direction"
+                                                    fieldDescription="Direction"
+                                                    fieldLabel="Sort Direction"
+                                                    name="./sortDirection"/>
+                                                <directionvalue
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    emptyText="Option value"
+                                                    fieldDescription="Option value"
+                                                    fieldLabel="Option value"
+                                                    name="./sortDirectionValue"/>
+                                            </items>
+                                        </field>
+                                    </sortdirectionlist>
+                                    <defaultSort
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                        deleteHint="{Boolean}true"
+                                        fieldDescription="Select select parameter on which default sorting is performed"
+                                        fieldLabel="Default Sort"
+                                        name="./defaultSort">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <title
+                                                jcr:primaryType="nt:unstructured"
+                                                fieldDescription="Sort by title"
+                                                text="Title"
+                                                value="@jcr:content/jcr:title"/>
+                                            <lastmodified
+                                                jcr:primaryType="nt:unstructured"
+                                                fieldDescription="Sort by publish date"
+                                                text="Last modified date"
+                                                value="@jcr:content/cq:lastModified"/>
+                                        </items>
+                                    </defaultSort>
+                                    <defaultSortDirection
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                        deleteHint="{Boolean}true"
+                                        fieldLabel="Default Sort Direction"
+                                        ignoreData="{Boolean}false"
+                                        name="./defaultSortDirection"
+                                        vertical="{Boolean}false">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <asc
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Ascending"
+                                                value="asc"/>
+                                            <desc
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Descending"
+                                                value="desc"/>
+                                        </items>
+                                    </defaultSortDirection>
+                                    <loadMoreText
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        emptyText="Load More"
+                                        fieldDescription="Enter load more button text else default Load More text will be displayed"
+                                        fieldLabel="Load more text"
+                                        name="./loadMoreText"/>
+                                    <noResultText
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        emptyText="No Results"
+                                        fieldDescription="Enter text that you want to display when no results found"
+                                        fieldLabel="No Result Text"
+                                        name="./noResultText"/>
+                                    <defaultImage
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                        fieldDescription="Search result default image"
+                                        fieldLabel="Search result default image"
+                                        name="./defaultResultImage"
+                                        rootPath="/content/dam/dpss"/>
+                                </items>
+                            </column>
+                        </items>
+                    </tab3>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

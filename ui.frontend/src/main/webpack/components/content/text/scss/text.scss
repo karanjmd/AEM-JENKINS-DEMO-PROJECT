@@ -1,0 +1,168 @@
+.text {
+    &.text__section-title {
+        p {
+            color: color(grey4);
+            text-transform: uppercase;
+            text-align: left;
+            font-size: fsize(24);           
+        }
+    }
+    &.text__secondary-title {
+        p {
+            color: color(blue);
+            text-align: left;
+            font-size: fsize(20);
+        }
+    }
+    &.text__description {
+        p {
+            color: color(grey4);
+            font-size: fsize(16);
+            text-align: left;
+        }
+    }
+    /**Heading equivalent to H1**/
+    &.heading--xlarge{
+        p{
+        font-size:fsize(42);
+        font-weight:fweight(300);
+            @include respond-above(sm){
+                font-size: fsize(48);
+            }
+        }
+    }
+    /**Heading equivalent to H2**/
+    &.heading--large{
+        p{
+        font-size: fsize(36);
+        font-weight: fweight(300);
+            @include respond-above(sm){
+                font-size: fsize(42);
+            }
+        }
+    }
+    /**Heading equivalent to H3**/
+    &.heading--medium{
+        p{
+        font-size:fsize(22);
+        font-weight: fweight(300);
+            @include respond-above(sm){
+                font-size: fsize(36);
+            }
+        }
+    }
+    /**Heading equivalent to H4**/
+    &.heading--small{
+        p{
+        font-size: fsize(20);
+        font-weight: fweight(300);
+            @include respond-above(sm){
+                font-size: fsize(24);
+            }
+        }
+    }
+    /**Heading equivalent to H5**/
+    &.heading--xsmall{
+        p{
+        font-size: fsize(16);
+        font-weight: fweight(300);
+            @include respond-above(sm){
+                font-size: fsize(18);
+            }
+        }
+    }
+    /**Heading equivalent to H6**/
+    &.heading--xxsmall{
+        p{
+        font-size: fsize(14);
+        font-weight: fweight(300);
+            @include respond-above(sm){
+                font-size: fsize(16);
+            }
+        }
+    }
+    &.color--red{
+        p{
+        color: color(red);
+        }
+    }
+    &.color--white{
+        p{
+        color: color(white);
+        }
+    }
+    &.color--blue{
+        p{
+        color: color(blue);
+        }
+    }
+    &.text--highlight{      
+        background-color: color(gainsboro);     
+    }
+    .cmp-text {
+        &.rte__content{
+            ol, ul{
+                list-style: revert;
+                padding: revert;
+            }
+        }
+        a{
+            color: color(blue);
+            text-decoration: underline;
+        }
+        .text--highlight{       
+            background-color: color(gainsboro);     
+        }
+    }
+    /**Heading equivalent to H2**/
+    .heading--large{
+        font-size: fsize(36);
+        font-weight: fweight(300);
+            @include respond-above(sm){
+                font-size: fsize(42);
+            }
+    }
+    /**Heading equivalent to H3**/
+    .heading--medium{
+        font-size:fsize(22);
+        font-weight: fweight(300);
+            @include respond-above(sm){
+                font-size: fsize(36);
+            }
+    }
+    /**Heading equivalent to H4**/
+    .heading--small{
+        font-size: fsize(20);
+        font-weight: fweight(300);
+            @include respond-above(sm){
+                font-size: fsize(24);
+            }
+    }
+    /**Heading equivalent to H5**/
+    .heading--xsmall{
+        font-size: fsize(16);
+        font-weight: fweight(300);
+            @include respond-above(sm){
+                font-size: fsize(18);
+            }
+    }
+    .color--red{
+        color: color(red);
+    }
+    .color--white{
+        color: color(white);
+    }
+}
+.rte__content{
+    ol, ul{
+        list-style: revert;
+        padding: revert;
+    }
+    a{
+        color: color(blue);
+        text-decoration: underline;
+    }
+    .text--highlight{       
+        background-color: color(gainsboro);     
+    }
+}

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/libs/settings/wcm/designs/default"
+        cq:lastModified="{Date}2023-02-09T12:16:38.618+05:30"
+        cq:lastModifiedBy="admin"
+        cq:template="/libs/cq/workflow/templates/model"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="DPSS epolicy Request for Deletion"
+        sling:resourceType="cq/workflow/components/pages/model"
+        lastSynced="{Date}2022-12-16T19:14:11.759+05:30">
+        <flow
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/parsys">
+            <participant
+                jcr:created="{Date}2022-12-15T16:22:43.135+05:30"
+                jcr:createdBy="admin"
+                jcr:description="please delete page"
+                jcr:lastModified="{Date}2022-12-16T19:11:57.729+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="DPSS Request for Deletion"
+                sling:resourceType="cq/workflow/components/model/participant">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    DO_NOTIFY="true"
+                    PARTICIPANT="epolicydeletiongroup"/>
+            </participant>
+            <process
+                jcr:created="{Date}2022-12-15T16:24:10.439+05:30"
+                jcr:createdBy="admin"
+                jcr:description="Deactivates the page"
+                jcr:lastModified="{Date}2022-12-16T19:11:00.153+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="DPSS Request for Deactivation"
+                sling:resourceType="cq/workflow/components/model/process">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    PROCESS="com.day.cq.wcm.workflow.process.DeactivatePageProcess"
+                    PROCESS_AUTO_ADVANCE="true"/>
+            </process>
+            <participant_1177303056
+                jcr:created="{Date}2022-12-15T16:27:37.213+05:30"
+                jcr:createdBy="admin"
+                jcr:description="deletes the page resource on author"
+                jcr:lastModified="{Date}2023-02-09T12:10:28.758+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="DPSS Delete Page Resource"
+                sling:resourceType="cq/workflow/components/model/participant">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    DO_NOTIFY="true"
+                    PARTICIPANT="epolicydeletiongroup"/>
+            </participant_1177303056>
+            <process_1365494431
+                jcr:created="{Date}2022-12-15T16:29:25.371+05:30"
+                jcr:createdBy="admin"
+                jcr:description="Deletes the page"
+                jcr:lastModified="{Date}2023-02-09T12:16:38.610+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="DPSS Delete Page"
+                sling:resourceType="cq/workflow/components/model/process">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    PROCESS="com.day.cq.wcm.workflow.process.DeletePageProcess"
+                    PROCESS_AUTO_ADVANCE="true"/>
+            </process_1365494431>
+        </flow>
+    </jcr:content>
+</jcr:root>

@@ -1,0 +1,146 @@
+.title__img__list {
+    margin-bottom: 20px;
+
+    @include respond-above(md) {
+        margin-bottom: 0;
+    }
+
+    img {
+        border: 1px solid #707070;
+        margin-bottom: 13px;
+        height: 176px;
+        object-fit: cover;
+        width: 100%;
+
+        @include respond-above(md) {
+            margin-bottom: 19px;
+            height: 242px;
+        }
+    }
+
+    .offsetB15 {
+        &.heading--large {
+            font-size: fsize(20);
+            line-height: 27px;
+            font-weight: 700;
+            letter-spacing: 0px;
+            color: color(blue);
+            margin-bottom: 10px;
+        }
+    }
+
+    .rte__content.js-more-content {
+        color: color(grey4);       
+        font-size: fsize(16);
+        font-weight: 400;
+        letter-spacing: 0px;
+        margin: 0;
+
+    }
+
+    /**Heading equivalent to H2**/
+    .heading--large {
+        font-size: fsize(36);
+        font-weight: fweight(300);
+
+        @include respond-above(sm) {
+            font-size: fsize(42);
+        }
+    }
+
+    /**Heading equivalent to H3**/
+    .heading--medium {
+        font-size: fsize(22);
+        font-weight: fweight(300);
+
+        @include respond-above(sm) {
+            font-size: fsize(36);
+        }
+    }
+
+    /**Heading equivalent to H4**/
+    .heading--small {
+        font-size: fsize(20);
+        font-weight: fweight(300);
+
+        @include respond-above(sm) {
+            font-size: fsize(24);
+        }
+    }
+
+    /**Heading equivalent to H5**/
+    .heading--xsmall {
+        font-size: fsize(16);
+        font-weight: fweight(300);
+
+        @include respond-above(sm) {
+            font-size: fsize(18);
+        }
+    }
+
+    .color--red {
+        color: color(red);
+    }
+
+    .color--white {
+        color: color(white);
+    }
+}
+
+.showmore__border--btn {
+    align-items: center;
+    display: flex;
+    padding-top: 0.9375rem;
+
+    span {
+        background: color(blue);
+        display: block;
+        height: 1px;
+        width: 100%;
+    }
+
+    button {
+        align-items: center;
+        background: none;
+        border: 1px solid transparent;
+        box-shadow: none;
+        cursor: pointer;
+        color: color(blue);
+        display: flex;
+        font-size: fsize(20);
+        font-weight: 300;
+        margin: 5px 0;
+        padding: 0 10px;
+        width: 200px;
+
+        i {
+            font-size: fsize(16);
+            padding-left: 5px;
+        }
+    }
+
+    small {
+        font-size: inherit;
+    }
+}
+
+.accordion-card__description--para {
+    height: 90px;
+    overflow: hidden;
+
+}
+
+.aem-Grid {
+    .card {
+        margin-bottom: 21px;
+
+        @include respond-above(md) {
+            padding-right: 20px;
+            margin-bottom: 50px;
+
+            &:last-child {
+                padding-right: 0;
+            }
+        }
+    }
+}

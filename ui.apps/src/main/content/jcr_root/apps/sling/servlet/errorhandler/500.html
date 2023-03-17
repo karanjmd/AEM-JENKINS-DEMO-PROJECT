@@ -1,0 +1,3 @@
+<sly data-sly-use.errorHandler="${'com.adobe.aem.lacounty.dpss.core.models.ErrorPageHandlerModel' @ errorCode='500'}">      
+<sly data-sly-test="${errorHandler.errorPage}" data-sly-resource="${errorHandler.errorPage @ extension = 'html'}"></sly>
+</sly>

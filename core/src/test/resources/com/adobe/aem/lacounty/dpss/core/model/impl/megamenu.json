@@ -1,0 +1,75 @@
+{
+	"mega": {
+		"jcr:primaryType": "nt:unstructured",
+		"jcr:createdBy": "admin",
+		"logoAltTxt": "DPSS LOGO",
+		"logoimage": "/content/dpss/en/Homepage",
+		"jcr:lastModifiedBy": "admin",
+		"resultpage": "/content/dpss/en/Homepage/ResultPage",
+		"jcr:created": "Wed Jun 29 2022 15:32:58 GMT+0530",
+		"logo": "/content/dam/dpss/dpss-logo.svg",
+		"jcr:lastModified": "Wed Jul 20 2022 09:44:21 GMT+0530",
+		"sling:resourceType": "dpss/components/content/megamenu",
+		"logolink": "/content/dpss/en/Homepage",
+		"titleandlinks": {
+			"jcr:primaryType": "nt:unstructured",
+			"item0": {
+				"jcr:primaryType": "nt:unstructured",
+				"links": "/content/dpss/en/Homepage/sites/application",
+				"title": "Applications",
+				"openInTab": "true"
+			},
+			"item1": {
+				"jcr:primaryType": "nt:unstructured",
+				"links": "/content/dpss/en/Homepage/resources",
+				"title": "Resources",
+				"openInTab": "true"
+			},
+			"item2": {
+				"jcr:primaryType": "nt:unstructured",
+				"links": "/content/dpss/en/Homepage/sites/services",
+				"title": "Services",
+				"openInTab": "true"
+			},
+			"item3": {
+				"jcr:primaryType": "nt:unstructured",
+				"links": "/content/dpss/en/Homepage/aboutdpss",
+				"title": "About DPSS",
+				"openInTab": "true"
+			},
+			"item4": {
+				"jcr:primaryType": "nt:unstructured",
+				"links": "/content/dpss/en/Homepage/sites/helpandsupport",
+				"title": "Help & Support",
+				"openInTab": "true"
+			}
+		},
+		"searchdetails": {
+			"jcr:primaryType": "nt:unstructured",
+			"item0": {
+				"jcr:primaryType": "nt:unstructured",
+				"filter": "My DPSS"
+			},
+			"item1": {
+				"jcr:primaryType": "nt:unstructured",
+				"filter": "Dora"
+			},
+			"item2": {
+				"jcr:primaryType": "nt:unstructured",
+				"filter": "Documents"
+			},
+			"item3": {
+				"jcr:primaryType": "nt:unstructured",
+				"filter": "Policies"
+			},
+			"item4": {
+				"jcr:primaryType": "nt:unstructured",
+				"filter": "External"
+			},
+			"item5": {
+				"jcr:primaryType": "nt:unstructured",
+				"filter": "Internal"
+			}
+		}
+	}
+}

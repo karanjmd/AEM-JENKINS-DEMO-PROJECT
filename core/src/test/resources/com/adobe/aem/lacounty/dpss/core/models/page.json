@@ -1,0 +1,98 @@
+{
+	"notification": {
+		"jcr:primaryType": "cq:Page",
+		"jcr:createdBy": "admin",
+		"jcr:created": "Mon Jul 18 2022 17:10:28 GMT+0530",
+		"jcr:content": {
+			"jcr:primaryType": "cq:PageContent",
+			"jcr:createdBy": "admin",
+			"jcr:title": "Notifications",
+			"subText": "What are you looking for ?",
+			"globalBgImage": "/content/dam/dpss/rifqi-ali-ridho-449445-unsplash@2x.png",
+			"cq:template": "/conf/dpss/settings/wcm/templates/notifications-page",
+			"cq:contextHubSegmentsPath": "/etc/segmentation/contexthub",
+			"jcr:created": "Mon Jul 18 2022 17:10:28 GMT+0530",
+			"cq:lastModified": "Thu Jul 28 2022 18:52:56 GMT+0530",
+			"jcr:description": "This is content page banner",
+			"sling:resourceType": "dpss/components/structure/base-page",
+			"cq:contextHubPath": "/etc/cloudsettings/default/contexthub",
+			"cq:lastModifiedBy": "admin",
+			"hideDesc": "true",
+			"linkURL": "/content/dpss/en/Homepage",
+			"link": {
+				"jcr:primaryType": "nt:unstructured",
+				"item0": {
+					"jcr:primaryType": "nt:unstructured",
+					"itemText": "link1",
+					"itemAction": "_blank",
+					"itemTarget": "/content/dpss/en/Homepage"
+				},
+				"item1": {
+					"jcr:primaryType": "nt:unstructured",
+					"itemText": "link2",
+					"itemAction": "_self",
+					"itemTarget": "/content/dpss/en/Homepage",
+
+
+					"root": {
+						"jcr:primaryType": "nt:unstructured",
+						"jcr:lastModifiedBy": "admin",
+						"jcr:lastModified": "Mon Jul 18 2022 17:06:41 GMT+0530",
+						"sling:resourceType": "wcm/foundation/components/responsivegrid",
+						"container": {
+							"jcr:primaryType": "nt:unstructured",
+							"jcr:createdBy": "admin",
+							"jcr:lastModifiedBy": "admin",
+							"layout": "responsiveGrid",
+							"jcr:created": "Mon Jul 18 2022 17:07:40 GMT+0530",
+							"fixBgImage": "false",
+							"jcr:lastModified": "Mon Jul 18 2022 17:08:47 GMT+0530",
+							"sling:resourceType": "dpss/components/content/container",
+							"layoutcontainer": {
+								"jcr:primaryType": "nt:unstructured",
+								"jcr:createdBy": "admin",
+								"jcr:lastModifiedBy": "admin",
+								"jcr:created": "Mon Jul 18 2022 17:08:22 GMT+0530",
+								"jcr:lastModified": "Mon Jul 18 2022 17:09:30 GMT+0530",
+								"sling:resourceType": "dpss/components/content/layoutContainer"
+							},
+							"layoutcontainer_2081518535": {
+								"jcr:primaryType": "nt:unstructured",
+								"jcr:createdBy": "admin",
+								"jcr:lastModifiedBy": "admin",
+								"jcr:created": "Mon Jul 18 2022 17:08:28 GMT+0530",
+								"jcr:lastModified": "Mon Jul 18 2022 17:09:48 GMT+0530",
+								"sling:resourceType": "dpss/components/content/layoutContainer",
+								"contentbanner": {
+									"jcr:primaryType": "nt:unstructured",
+									"jcr:createdBy": "admin",
+									"subText": "What are you looking for ?",
+									"hideDesc": "true",
+									"jcr:lastModifiedBy": "admin",
+									"jcr:created": "Thu Jul 28 2022 17:56:05 GMT+0530",
+									"jcr:lastModified": "Thu Jul 28 2022 18:52:56 GMT+0530",
+									"sling:resourceType": "dpss/components/content/contentbanner",
+									"link": {
+										"jcr:primaryType": "nt:unstructured",
+										"item0": {
+											"jcr:primaryType": "nt:unstructured",
+											"itemText": "link1",
+											"itemAction": "_blank",
+											"itemTarget": "/content/dpss/en/Homepage"
+										},
+										"item1": {
+											"jcr:primaryType": "nt:unstructured",
+											"itemText": "link2",
+											"itemAction": "_self",
+											"itemTarget": "/content/dpss/en/Homepage"
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

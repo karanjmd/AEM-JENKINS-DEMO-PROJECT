@@ -1,0 +1,179 @@
+.alert-notification {
+    font-size: fsize(24);  
+    opacity: 0;
+    height: 0;
+    
+    .alert-danger {
+        background-color: color(palered); 
+        color: color(redberry);
+        .close{
+            color: color(redberry);
+        }        
+    }
+    .alert-info {
+        background-color: color(goldenyellow);
+        color: color(black);
+        .close{
+            color: color(black);
+        }  
+    }
+   
+    &.alert-show {
+        opacity: 1;
+        height: auto;
+        @include respond-above(md) {
+           // margin-bottom: -1.75rem;
+        }
+    }
+    &.alert-hide {
+        display: none;
+    }
+     /**Heading equivalent to H2**/
+    .heading--large{
+        font-size: fsize(36);
+        font-weight: fweight(300);
+            @include respond-above(sm){
+                font-size: fsize(42);
+            }
+    }
+    /**Heading equivalent to H3**/
+    .heading--medium{
+        font-size:fsize(22);
+        font-weight: fweight(300);
+            @include respond-above(sm){
+                font-size: fsize(36);
+            }
+    }
+    /**Heading equivalent to H4**/
+    .heading--small{
+        font-size: fsize(20);
+        font-weight: fweight(300);
+            @include respond-above(sm){
+                font-size: fsize(24);
+            }
+    }
+    /**Heading equivalent to H5**/
+    .heading--xsmall{
+        font-size: fsize(16);
+        font-weight: fweight(300);
+            @include respond-above(sm){
+                font-size: fsize(18);
+            }
+    }
+    .color--red{
+        color: color(red);
+        font-size: fsize(16) !important;
+    }
+    .color--white{
+        color: color(white);
+        font-size: fsize(16) !important;
+    }
+}
+.alert{
+    padding: 28px 0;  
+    &.alert-dismissible{
+        position: relative;
+        display: flex;
+        align-items: center;
+        span{
+            font-size: fsize(24);
+            line-height: 22px;
+            margin-right: 15px;
+            top: 7px;  
+            @include respond-above(sm){
+                font-size: fsize(40);
+               // line-height: 40px;
+                margin-right: 22px;
+            }          
+        }
+        .alert__info{
+            padding-right: 20px;
+            p {
+                display: block;
+                margin: 0;
+                padding: 0; 
+                font-size: fsize(14);
+                line-height: 19px;
+                @include respond-above(sm){
+                    font-size: fsize(16);
+                    line-height: 22px;
+                }              
+                &.alertInfo__title{
+                    font-size: fsize(18);
+                    line-height: 24px;
+                    font-weight: fweight(700);
+                    @include respond-above(sm){
+                        font-size: fsize(24);
+                        line-height: 33px;
+                    }
+                }
+                &.alertInfo__description{
+                    font-size: fsize(14);
+                    line-height: 19px;
+                    @include respond-above(sm){
+                        font-size: fsize(16);
+                        line-height: 22px;
+                    }
+                }
+            }
+
+             ul, ol{
+                 padding-inline-start: 22px;
+                 font-size: fsize(16);
+             }
+        }
+        .close{
+            position: absolute;
+            right: 0px;
+            top: 50%;
+            text-decoration: none;
+            display: block;
+            font-size: fsize(30);
+            font-weight: bold;
+            transform: translateY(-50%);
+        }
+        .alertInfo__title{
+                    font-size: fsize(18);
+                    line-height: 24px;
+                    font-weight: fweight(700);
+                    @include respond-above(sm){
+                        font-size: fsize(24);
+                        line-height: 33px;
+                    }
+                }
+         /**Heading equivalent to H2**/
+    .heading--large{
+        font-size: fsize(36);
+        font-weight: fweight(300);
+            @include respond-above(sm){
+                font-size: fsize(42);
+            }
+    }
+    /**Heading equivalent to H3**/
+    .heading--medium{
+        font-size:fsize(22);
+        font-weight: fweight(300);
+            @include respond-above(sm){
+                font-size: fsize(36);
+            }
+    }
+    /**Heading equivalent to H4**/
+    .heading--small{
+        font-size: fsize(20);
+        font-weight: fweight(300);
+            @include respond-above(sm){
+                font-size: fsize(24);
+            }
+    }
+    /**Heading equivalent to H5**/
+    .heading--xsmall{
+        font-size: fsize(16);
+        font-weight: fweight(300);
+            @include respond-above(sm){
+                font-size: fsize(18);
+            }
+    }
+        
+    }
+
+}

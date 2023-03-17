@@ -1,0 +1,109 @@
+<div data-sly-test="${wcmmode.edit}" class="cq-placeholder" data-emptytext="Image Gallery"></div>
+
+<div data-sly-use.gallery="com.adobe.aem.lacounty.dpss.core.models.PhotoGallery"
+	data-sly-test="${gallery.galleryItems.size > 0}"> 
+
+    <div class="cmp-photo-gallery-back_button" onclick="history.back()">
+	<i class="fas fa-chevron-left" aria-hidden="true"></i>${properties.backButtonLabel}</div>
+
+
+<div class="aem-Grid aem-Grid--12">
+    <div class="aem-GridColumn aem-GridColumn--phone--12">
+        <!--/* <div class="cmp-photo-gallery" data-api-url="" data-template-id="photo-gallery-template"> */-->
+        <div class="cmp-photo-gallery" data-api-url="" data-template-id="photo-gallery-template" data-maxdesktopitem="${gallery.maxItems}" data-maxmobileitem="${gallery.maxItemsMob}">    
+
+
+		<!--/* <div class="cmp-photo-gallery-grid ${gallery.layout=='list' ? 'grid-list-type' : (gallery.layout=='columns'? 'grid-column-control': (gallery.layout=='grid'? 'grid-masonary-layout': '' ))} ${gallery.columns=='2' ? 'grid-2-col' : (gallery.columns=='3'? 'grid-3-col': (gallery.columns=='4'? 'grid-4-col': '' ))} ${gallery.imgDisplayOption=='bottom' ? 'grid-image-bottom' : 'grid-image-top'} "> */-->
+        <div class="paginated-list cmp-photo-gallery-grid ${gallery.layout=='list' ? 'grid-list-type' : (gallery.layout=='columns'? 'grid-column-control': (gallery.layout=='grid'? 'grid-masonary-layout': '' ))} ${gallery.columns=='2' ? 'grid-2-col' : (gallery.columns=='3'? 'grid-3-col': (gallery.columns=='4'? 'grid-4-col': '' ))} ${gallery.imgDisplayOption=='bottom' ? 'grid-image-bottom' : 'grid-image-top'} " id="paginated-list" data-desktoplimit="${gallery.paginateAfter}" data-mobilelimit="${gallery.paginateAfterMob}" data-rowlimit="${gallery.columns ? (gallery.maxRowsb4Pagination ? gallery.maxRowsb4Pagination : 0 ) :0}" data-totalcol="${gallery.columns ? gallery.columns :0}" data-layout="${gallery.layout=='list' ? 'list' : (gallery.layout=='columns'? 'columns': (gallery.layout=='grid'? 'grid': '' ))}">
+
+            <!--/* Itteration of asserts selected */-->
+			<sly data-sly-list="${gallery.galleryItems}">
+				<div class="pagin-list pswp-gallery__item grid-box ${item.type=='sling:Folder' ? 'grid-folder-type' : 'grid-image-top'} ${gallery.itemBgColor ? 'grid-with-bgColor' : ''}" data-image-title="${item.title}">
+
+				<a href="${item.slideShowUrl ? item.slideShowUrl : item.path}" data-pswp-width="${item.width}" data-pswp-height="${item.height}" 
+        			 data-cropped="true" data-folder-type="${item.type=='sling:Folder' ? 'true' : 'false'}" data-path="${item.path}">
+
+                        <!--/* <span class="pswp-title-content">${item.description}</span> */-->
+
+                        <span class="pswp-title-content" aria-hidden="true">${gallery.showTitleInSlideshow ? item.title : ''}</span>
+
+                        <div class="grid-img-container">
+                            <div class="img-responsive lazyloaded"
+                                        data-bg="${item.thumbnailUrl}"
+                                        style="background-image: url('${item.thumbnailUrl @ context='uri'}');">
+                             </div>
+                        </div>
+                        <figure>
+                            <img class="gallery-thumbnail" src="${item.thumbnailUrl}" alt="${properties.listFrom=='static' ? (item.altText ? item.altText : item.title) : item.title}" />
+                        </figure>
+
+                        <sly data-sly-test="${item.type=='dam:Asset'}">
+                                <sly data-sly-test="${gallery.displayPhotoTitle}">
+                                    <sly data-sly-test="${gallery.itemBgColor}">
+                                            <span class="grid-title"  style="background-color:${gallery.itemBgColor @ context='uri'};" >
+                                                <i class="fas fa-folder" aria-hidden="true"></i>${item.title}
+                                            </span>
+                                        </sly>
+
+                                        <sly data-sly-test="${!gallery.itemBgColor}">
+                                            <span class="grid-title"  style="background-color: none" >
+                                                <i class="fas fa-folder" aria-hidden="true"></i>${item.title}
+                                            </span>
+                                        </sly>
+                                </sly>
+                        </sly>
+
+                        <sly data-sly-test="${item.type=='sling:Folder'}">
+                                <sly data-sly-test="${gallery.displayFolderName}">
+                                    <sly data-sly-test="${gallery.itemBgColor}">
+                                            <span class="grid-title"  style="background-color:${gallery.itemBgColor @ context='uri'};" >
+                                                <i class="fas fa-folder" aria-hidden="true"></i>${item.title}
+                                            </span>
+                                        </sly>
+        
+                                        <sly data-sly-test="${!gallery.itemBgColor}">
+                                            <span class="grid-title"  style="background-color: none" >
+                                                <i class="fas fa-folder" aria-hidden="true"></i>${item.title}
+                                            </span>
+                                        </sly>
+                                </sly>
+                        </sly>
+
+
+                        <span class="pswp-caption-content" aria-hidden="true">
+                        ${gallery.showDescInSlideshow ? item.description :''}
+                        </span>
+
+
+					</a>
+				</div>
+            </sly>
+		</div>
+
+
+        </div>
+
+		<nav class="pagination-container" style="max-width:100%">
+			<div class="left-side" id="left-side">
+       
+			</div>
+			
+			<div class="right-side"> 
+				<button class="pagination-button prev-button" id="prev-button" aria-label="Previous page" title="Previous page" >
+					Previous
+				</button>
+
+				<div id="pagination-numbers" class="pagination-numbers">
+    
+				</div>
+
+				<button class="pagination-button next-button" id="next-button" aria-label="Next page" title="Next page">
+				Next
+				</button>
+			</div>
+
+		</nav>
+    </div>
+   
+	</div>
+</div>

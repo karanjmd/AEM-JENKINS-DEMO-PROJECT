@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Author Footer"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        granite:class="cmp-author_editor"
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                maximized="{Boolean}true">
+                <items jcr:primaryType="nt:unstructured">
+                    <contactdetailstab
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Contact Details Tab"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <heading
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldDescription="Column Heading"
+                                fieldLabel="Heading"
+                                name="./heading"/>
+                            <title
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldDescription="Title (First line of Column)"
+                                fieldLabel="Title"
+                                name="./title"/>
+                            <address
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldDescription="Address"
+                                fieldLabel="Address"
+                                name="./address"/>
+                            <phone
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldDescription="Phone Number"
+                                fieldLabel="Phone"
+                                name="./phone"/>
+                            <email
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldDescription="E-Mail"
+                                fieldLabel="E-Mail"
+                                name="./email"/>
+                            <gtext
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Text"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <well
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/well"
+                                        fieldLabel="generic text">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <generictext
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                                composite="{Boolean}true"
+                                                fieldDescription="Click 'Add' for new field"
+                                                fieldLabel="Text Area">
+                                                <field
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                    name="./generictext">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <title
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                                            emptyText="Enter the text here"
+                                                            fieldLabel="Text"
+                                                            name="./gtext"/>
+                                                    </items>
+                                                </field>
+                                            </generictext>
+                                        </items>
+                                    </well>
+                                </items>
+                            </gtext>
+                        </items>
+                    </contactdetailstab>
+                    <bureauslinks
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Bureaus Links"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <well
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/well"
+                                fieldLabel="Footer Details">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <heading
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Column Heading"
+                                        fieldLabel="Heading"
+                                        name="./heading2"/>
+                                    <bureauslinkdetails
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                        composite="{Boolean}true"
+                                        fieldDescription="Footer Details"
+                                        fieldLabel="Footer Details"
+                                        required="{Boolean}false">
+                                        <field
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                                            emptyText="Footer Details"
+                                            name="./bureauslinkdetails">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <blinktext
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    emptyText="Link Text"
+                                                    fieldDescription="Link Text"
+                                                    fieldLabel="Link Text"
+                                                    name="./blinktext"/>
+                                                <blinkURL
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                    emptyText="Link URL"
+                                                    fieldDescription="Target Link"
+                                                    fieldLabel="Link URL"
+                                                    name="./blinkURL"
+                                                    rootPath="/content"/>
+                                                <bopenintab
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                    fieldDescription="Check to Open in new tab"
+                                                    fieldLabel="Open in new tab"
+                                                    name="./bopenInTab"
+                                                    text="Open in new tab"
+                                                    value="{Boolean}true"/>
+                                            </items>
+                                        </field>
+                                    </bureauslinkdetails>
+                                </items>
+                            </well>
+                        </items>
+                    </bureauslinks>
+                    <externallinks
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="External Links"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <well
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/well"
+                                fieldLabel="Footer Details">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <heading
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Column Heading"
+                                        fieldLabel="Heading"
+                                        name="./heading3"/>
+                                    <externallinkdetails
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                        composite="{Boolean}true"
+                                        fieldDescription="Footer Details"
+                                        fieldLabel="Footer Details"
+                                        required="{Boolean}false">
+                                        <field
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                                            emptyText="Footer Details"
+                                            name="./externallinkdetails">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <linktext
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    emptyText="Link Text"
+                                                    fieldDescription="Link Text"
+                                                    fieldLabel="Link Text"
+                                                    name="./linktext"/>
+                                                <linkURL
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                    emptyText="Link URL"
+                                                    fieldLabel="Link URL"
+                                                    name="./linkURL"
+                                                    rootPath="/content"/>
+                                                <openintab
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                    fieldDescription="Check to Open in new tab"
+                                                    fieldLabel="Open in new tab"
+                                                    name="./openInTab"
+                                                    text="Open in new tab"
+                                                    value="{Boolean}true"/>
+                                            </items>
+                                        </field>
+                                    </externallinkdetails>
+                                </items>
+                            </well>
+                        </items>
+                    </externallinks>
+                    <policieslinks
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Policies"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <well
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/well"
+                                fieldLabel="Footer Details">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <heading
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Column Heading"
+                                        fieldLabel="Heading"
+                                        name="./heading4"/>
+                                    <policylinkdetails
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                        composite="{Boolean}true"
+                                        fieldDescription="Footer Details"
+                                        fieldLabel="Footer Details"
+                                        required="{Boolean}false">
+                                        <field
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                                            emptyText="Footer Details"
+                                            name="./policylinkdetails">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <plinktext
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    emptyText="Link Text"
+                                                    fieldDescription="Link Text"
+                                                    fieldLabel="Link Text"
+                                                    name="./plinktext"/>
+                                                <plinkURL
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                    emptyText="Link URL"
+                                                    fieldLabel="Link URL"
+                                                    name="./plinkURL"
+                                                    rootPath="/content"/>
+                                                <popenintab
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                    fieldDescription="Check to Open in new tab"
+                                                    fieldLabel="Open in new tab"
+                                                    name="./popenInTab"
+                                                    text="Open in new tab"
+                                                    value="{Boolean}true"/>
+                                            </items>
+                                        </field>
+                                    </policylinkdetails>
+                                </items>
+                            </well>
+                        </items>
+                    </policieslinks>
+                    <footerbottom
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Footer Bottom"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <tagline
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldDescription="TagLine"
+                                fieldLabel="TagLine"
+                                name="./tagline"/>
+                            <copyrights
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldDescription="Copyrights"
+                                fieldLabel="Copyrights"
+                                name="./copyrights"/>
+                            <reserved
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldLabel="Reserved"
+                                name="./reserved"/>
+                            <logo
+                                granite:class="dpss-footer-author-logo"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                                allowUpload="{Boolean}false"
+                                autoStart="{Boolean}false"
+                                class="cq-droptarget"
+                                fieldLabel="Logo image"
+                                fileNameParameter="./fileName"
+                                fileReferenceParameter="./logo"
+                                mimeTypes="[image/gif,image/jpeg,image/png,image/webp,image/tiff,image/svg+xml]"
+                                multiple="{Boolean}false"
+                                name="./file"
+                                title="Upload Image Asset"
+                                uploadUrl="${suffix.path}"
+                                useHTML5="{Boolean}true"/>
+                        </items>
+                    </footerbottom>
+                    <sociallinks
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Social Links"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <well
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/well"
+                                fieldLabel="Footer Details">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <sociallinkdetails
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                        composite="{Boolean}true"
+                                        fieldDescription="Footer Details"
+                                        fieldLabel="Footer Details"
+                                        required="{Boolean}false">
+                                        <field
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                                            emptyText="Footer Details"
+                                            name="./sociallinkdetails">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <slinkicon
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                    emptyText="Link Text"
+                                                    fieldDescription="Social plugin type and Social plugin name"
+                                                    fieldLabel="Link Text"
+                                                    name="./slinkicon">
+                                                    <datasource
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="dpss/components/utilities/genericlist/datasource"
+                                                        path="/etc/acs-commons/lists/font-awesome-dpss-socialicons"/>
+                                                </slinkicon>
+                                                <slinkURL
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                    emptyText="Link URL"
+                                                    fieldDescription="Target Link"
+                                                    fieldLabel="Link URL"
+                                                    name="./slinkURL"
+                                                    rootPath="/content"/>
+                                                <sopenintab
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                    fieldDescription="Check to Open in new tab"
+                                                    fieldLabel="Open in new tab"
+                                                    name="./sopenInTab"
+                                                    text="Open in new tab"
+                                                    value="{Boolean}true"/>
+                                            </items>
+                                        </field>
+                                    </sociallinkdetails>
+                                </items>
+                            </well>
+                        </items>
+                    </sociallinks>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

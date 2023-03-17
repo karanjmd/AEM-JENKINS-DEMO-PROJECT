@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="sling:OsgiConfig"
+    protocolValue="http"
+    serverName="localhost"
+	serverPort="8983"
+	serverPath="/content/dpss"
+	userName="admin"
+	password="admin"
+	collectionMappings="[/content/dpss/en:dpss_public]"
+	collectionName="dpss_public"/>

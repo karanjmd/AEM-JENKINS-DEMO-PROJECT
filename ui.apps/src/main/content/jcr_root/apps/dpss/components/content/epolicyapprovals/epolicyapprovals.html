@@ -1,0 +1,15 @@
+<div data-sly-use.placeholderTemplate="core/wcm/components/commons/v1/templates.html">
+</div>
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty=true}"></sly>
+
+<div data-sly-use.epolicy="com.adobe.aem.lacounty.dpss.core.models.EpolicyApprovalsModel"
+     data-sly-use.placeholderTemplate="core/wcm/components/commons/v1/templates.html"
+     class="cmp-epolicy">
+    <h1 class="cmp-epolicy">${epolicy.title}</h1>
+    <h2 class="cmp-epolicy">Contributors: ${epolicy.contributors}</h2>
+    <h2 class="cmp-epolicy">Reviewers: ${epolicy.reviewers}</h2>
+    <h2 class="cmp-epolicy">Section: ${epolicy.section}</h2>
+    <h2 class="cmp-epolicy">Branch: ${epolicy.branch}</h2>
+    <h2 class="cmp-epolicy">Division: ${epolicy.division}</h2>
+    <h2 class="cmp-epolicy">Bureau: ${epolicy.bureau}</h2>
+</div>

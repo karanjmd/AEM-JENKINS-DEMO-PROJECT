@@ -1,0 +1,154 @@
+{
+	"footer": {
+		"jcr:primaryType": "nt:unstructured",
+		"jcr:createdBy": "admin",
+		"tagline": "Enriching Lives through effective and caring service",
+		"jcr:lastModifiedBy": "admin",
+		"address": "12860 Crossroads Parkway South City of Industry, CA. 91746",
+		"heading2": "Bureaus",
+		"heading3": "External Links",
+		"heading4": "Policy",
+		"reserved": "All rights reserved",
+		"jcr:created": "Wed Jun 22 2022 14:02:05 GMT+0530",
+		"copyrights": "© 2021 MY DPSS",
+		"logo": "/content/dam/dpss/seal@2x.png",
+		"email": "webmaster@dpss.gov",
+		"phone": "(562) 908-8400",
+		"title": "Department of Public Social Services",
+		"heading": "Contacts",
+		"jcr:lastModified": "Mon Jul 25 2022 15:27:42 GMT+0530",
+		"sling:resourceType": "dpss/components/structure/footer",
+		"logolink": "#",
+		"generictext": {
+			"jcr:primaryType": "nt:unstructured",
+			"item0": {
+				"jcr:primaryType": "nt:unstructured",
+				"gtext": "This is dpss text"
+			},
+			"item1": {
+				"jcr:primaryType": "nt:unstructured",
+				"gtext": "This is dpss text one"
+			}
+		},
+		"bureauslinkdetails": {
+			"jcr:primaryType": "nt:unstructured",
+			"item0": {
+				"jcr:primaryType": "nt:unstructured",
+				"blinkURL": "https://www.google.com",
+				"blinktext": "Administrative Services (BAS)",
+				"bopenInTab": "true"
+			},
+			"item1": {
+				"jcr:primaryType": "nt:unstructured",
+				"blinkURL": "https://www.google.com",
+				"blinktext": "Contract and Technical Services (BCTS)",
+				"bopenInTab": "true"
+			},
+			"item2": {
+				"jcr:primaryType": "nt:unstructured",
+				"blinkURL": "https://www.google.com",
+				"blinktext": "Human Resources (BHR)",
+				"bopenInTab": "true"
+			},
+			"item3": {
+				"jcr:primaryType": "nt:unstructured",
+				"blinkURL": "https://www.google.com",
+				"blinktext": "Program and Policy (BPP)",
+				"bopenInTab": "true"
+			},
+			"item4": {
+				"jcr:primaryType": "nt:unstructured",
+				"blinkURL": "https://www.google.com",
+				"blinktext": "Special Operations (BSO)",
+				"bopenInTab": "true"
+			},
+			"item5": {
+				"jcr:primaryType": "nt:unstructured",
+				"blinkURL": "https://www.google.com",
+				"blinktext": "Workforce Services North (BWSN)",
+				"bopenInTab": "true"
+			},
+			"item6": {
+				"jcr:primaryType": "nt:unstructured",
+				"blinkURL": "https://www.google.com",
+				"blinktext": "Workforce Services South (BWSS)",
+				"bopenInTab": "true"
+			}
+		},
+		"externallinkdetails": {
+			"jcr:primaryType": "nt:unstructured",
+			"item0": {
+				"jcr:primaryType": "nt:unstructured",
+				"linkURL": "https://www.google.com",
+				"linktext": "211 LA",
+				"openInTab": "true"
+			},
+			"item1": {
+				"jcr:primaryType": "nt:unstructured",
+				"linkURL": "https://www.google.com",
+				"linktext": "CDSS",
+				"openInTab": "true"
+			},
+			"item2": {
+				"jcr:primaryType": "nt:unstructured",
+				"linkURL": "https://www.google.com",
+				"linktext": "Another link",
+				"openInTab": "true"
+			},
+			"item3": {
+				"jcr:primaryType": "nt:unstructured",
+				"linkURL": "https://www.google.com",
+				"linktext": "Another link",
+				"openInTab": "true"
+			},
+			"item4": {
+				"jcr:primaryType": "nt:unstructured",
+				"linkURL": "https://www.google.com",
+				"linktext": "Another link",
+				"openInTab": "true"
+			},
+			"item5": {
+				"jcr:primaryType": "nt:unstructured",
+				"linkURL": "https://www.google.com",
+				"linktext": "Another link",
+				"openInTab": "true"
+			}
+		},
+		"policylinkdetails": {
+			"jcr:primaryType": "nt:unstructured",
+			"item0": {
+				"jcr:primaryType": "nt:unstructured",
+				"plinktext": "Accessibilities",
+				"plinkURL": "https://www.google.com",
+				"popenInTab": "true"
+			},
+			"item1": {
+				"jcr:primaryType": "nt:unstructured",
+				"plinktext": "Disclaimer",
+				"plinkURL": "https://www.google.com",
+				"popenInTab": "true"
+			},
+			"item2": {
+				"jcr:primaryType": "nt:unstructured",
+				"plinktext": "Privacy policy",
+				"plinkURL": "https://www.google.com",
+				"popenInTab": "true"
+			}
+		},
+		"sociallinkdetails": {
+			"jcr:primaryType": "nt:unstructured",
+			"item0": {
+				"jcr:primaryType": "nt:unstructured",
+				"slinkURL": "www.instagram.com",
+				"slinkicon": "fa fa-instagram",
+				"sopenInTab": "true"
+			},
+			"item1": {
+				"jcr:primaryType": "nt:unstructured",
+				"slinkURL": "www.facebook.com",
+				"slinkicon": "fa fa-facebook",
+				"sopenInTab": "true"
+			}
+		}
+	}
+}

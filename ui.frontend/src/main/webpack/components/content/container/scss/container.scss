@@ -1,0 +1,33 @@
+.section-container{
+    width: 100%;
+    margin: 0 auto;
+    padding: 0.875rem 0.5625rem;
+    //background-color: color(white);
+    border: 1px solid color(grey2);
+    box-shadow: 0px 3px 6px color(boxShadow);   
+    @include respond-above(md){    
+        margin: 1.75rem auto;
+        padding: 2.125rem 2.625rem;
+    }
+    @include respond-above(xlgr){
+        max-width: 110.375rem;
+    }
+}
+.cmp-container {
+	
+	 .padding--right{
+       padding-right: 40px;
+          
+    }
+    .padding--left{
+       padding-left: 40px;
+          
+    }
+    .sidebar-dpss{
+         
+    }
+  
+    
+}
+
+  

@@ -1,0 +1,77 @@
+.about-us-banner{
+    background-color: #0761A0;
+    .aboutus__banner{
+        padding: 22px 0; 
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        text-align: left; 
+        .banner__title{
+            font-size: fsize(28);
+            display: inline;
+            font-family: inherit;
+            font-weight: fweight(600);
+            @include respond-above(sm){
+                font-size: fsize(48);
+            }
+            &.color--white{
+                color: color(white);
+            }
+        }
+        p{
+            margin: 0;
+            color: color(white);
+            display: none;
+            @include respond-above(sm){
+                display: block;
+            }
+        }
+        ul, ol{
+            padding-inline-start: 40px;
+        }
+        li {
+	         color: color(white);
+           }
+    } 
+    /**Heading equivalent to H2**/
+    .heading--large{
+        font-size: fsize(36);
+        font-weight: fweight(300);
+            @include respond-above(sm){
+                font-size: fsize(42);
+            }
+    }
+    /**Heading equivalent to H3**/
+    .heading--medium{
+        font-size:fsize(22);
+        font-weight: fweight(300);
+            @include respond-above(sm){
+                font-size: fsize(36);
+            }
+    }
+    /**Heading equivalent to H4**/
+    .heading--small{
+        font-size: fsize(20);
+        font-weight: fweight(300);
+            @include respond-above(sm){
+                font-size: fsize(24);
+            }
+    }
+    /**Heading equivalent to H5**/
+    .heading--xsmall{
+        font-size: fsize(16);
+        font-weight: fweight(300);
+            @include respond-above(sm){
+                font-size: fsize(18);
+            }
+    }
+    .color--red{
+        color: color(red);
+    }
+    .color--white{
+        color: color(white);
+    }   
+}
+.cmp-title {}
+.cmp-title__text {}
+.cmp-title__link {}

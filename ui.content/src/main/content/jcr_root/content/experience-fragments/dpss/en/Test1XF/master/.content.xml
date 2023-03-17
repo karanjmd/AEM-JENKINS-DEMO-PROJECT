@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2022-06-29T14:59:40.571+05:30"
+        cq:lastModifiedBy="admin"
+        cq:tags="[]"
+        cq:template="/libs/settings/screens/experience-fragments/templates/experience-fragment-template-screens"
+        cq:xfMasterVariation="{Boolean}true"
+        cq:xfShowInEditor="{Boolean}true"
+        cq:xfVariantType="web"
+        jcr:description="xfdescription"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Experience Fragment"
+        sling:resourceType="cq/experience-fragments/components/xfscreens">
+        <root
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <image
+                cq:masterBuildingBlock="{Boolean}true"
+                jcr:created="{Date}2022-06-29T14:58:09.384+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2022-06-29T15:24:50.840+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="northern-lights"
+                sling:resourceType="cq/experience-fragments/editor/components/buildingblock">
+                <image674208981935100
+                    jcr:lastModified="{Date}2022-06-29T14:58:42.591+05:30"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="dpss/components/content/image"
+                    fileReference="/content/dam/we-retail/en/experiences/arctic-surfing-in-lofoten/northern-lights.jpg">
+                    <cq:responsive jcr:primaryType="nt:unstructured">
+                        <default
+                            jcr:primaryType="nt:unstructured"
+                            offset="0"
+                            width="6"/>
+                    </cq:responsive>
+                </image674208981935100>
+            </image>
+            <button
+                jcr:created="{Date}2022-06-29T14:58:25.040+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2022-06-29T14:59:40.525+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Buttontest"
+                sling:resourceType="dpss/components/content/button"
+                fontAwesomeKey="fa fa-desktop"
+                link="/content/dpss/en/Homepage/sites"/>
+        </root>
+    </jcr:content>
+</jcr:root>

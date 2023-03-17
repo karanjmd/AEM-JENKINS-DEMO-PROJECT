@@ -1,0 +1,14 @@
+{
+    "alert": {
+        "jcr:primaryType": "nt:unstructured",
+        "jcr:createdBy": "admin",
+        "jcr:lastModifiedBy": "admin",
+        "jcr:created": "Mon Jul 25 2022 09:08:33 GMT+0530",
+        "alertOrNotification": "alert",
+        "alertNotificationContent": "<p>This is alert and notifications</p>\r\n",
+        "jcr:lastModified": "Mon Jul 25 2022 09:09:21 GMT+0530",
+        "sling:resourceType": "dpss/components/content/alert-notification/v1/alert-notification",
+        "textIsRich": "true",
+        "timer": "30000"
+    }
+}

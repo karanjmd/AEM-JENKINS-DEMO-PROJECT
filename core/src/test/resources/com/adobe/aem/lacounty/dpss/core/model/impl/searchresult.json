@@ -1,0 +1,28 @@
+{
+	"searchresult": {
+		"searchPlaceHolder": "Search all of my DPSS",
+		"defaultSortDirection": "asc",
+		"resultpage": "/content/dpss/en/Homepage/ResultPage",
+		"resultsSize": "20",
+		"showResultCount": "30",
+		"defaultSort": "@jcr:content/jcr:title",
+		"noResultText": "No data found",
+		"loadMoreText": "Load more data",
+		"optionList": {
+			"jcr:primaryType": "nt:unstructured",
+			"item0": {
+				"jcr:primaryType": "nt:unstructured",
+				"option": "option1",
+				"optionValue": "option2"
+			}
+		},
+		"sortDirectionList": {
+			"jcr:primaryType": "nt:unstructured",
+			"item0": {
+				"jcr:primaryType": "nt:unstructured",
+				"sortDirection": "direction1",
+				"sortDirectionValue": "direction2"
+			}
+		}
+	}
+}

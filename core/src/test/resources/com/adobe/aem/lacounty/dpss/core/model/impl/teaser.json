@@ -1,0 +1,19 @@
+{
+ "teaser":{
+  "jcr:primaryType": "nt:unstructured",
+  "jcr:createdBy": "admin",
+  "fileReference": "/content/dam/dpss/viviana-rishe-UC8fvOyG5pU-unsplash.png",
+  "actionsEnabled": "true",
+  "jcr:lastModifiedBy": "admin",
+  "jcr:created": "Wed Nov 09 2022 10:12:34 GMT+0530",
+  "titleFromPage": "true",
+  "alt": "This is teaser",
+  "date": "Wed Nov 09 2022 00:00:00 GMT+0530",
+  "linkURL": "/content/dpss/en/homepage/sites",
+  "jcr:description": "<ul>\r\n<li>It is important to note that</li>\r\n</ul>\r\n",
+  "jcr:lastModified": "Fri Nov 18 2022 18:02:01 GMT+0530",
+  "descriptionFromPage": "false",
+  "sling:resourceType": "dpss/components/content/teaser/v1/teaser",
+  "textIsRich": "true"
+  }
+  }

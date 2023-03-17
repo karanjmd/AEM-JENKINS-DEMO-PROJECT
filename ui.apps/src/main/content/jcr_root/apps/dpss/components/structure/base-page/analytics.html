@@ -1,0 +1,14 @@
+<sly data-sly-use.runMode="com.adobe.aem.lacounty.dpss.core.components.models.GetRunMode">
+<sly data-sly-test="${runMode.dev=='dev'}">
+<script src="https://assets.adobedtm.com/c70179af6cc1/c698a255533b/launch-cde32e215926-development.js" async></script>
+</sly>
+<sly data-sly-test="${runMode.stage=='stage'}">
+<script src="https://assets.adobedtm.com/c70179af6cc1/c698a255533b/launch-bc8465b70c4b-staging.js" async></script>
+</sly>
+<sly data-sly-test="${runMode.prodAuthor=='prodauthor'}">
+<script src="https://assets.adobedtm.com/c70179af6cc1/c698a255533b/launch-bc8465b70c4b-staging.js" async></script>
+</sly>
+<sly data-sly-test="${runMode.prodPublisher=='prodpublish'}">
+<script src="https://assets.adobedtm.com/c70179af6cc1/c698a255533b/launch-880b6a20b1ee.min.js" async></script>
+</sly>
+</sly>

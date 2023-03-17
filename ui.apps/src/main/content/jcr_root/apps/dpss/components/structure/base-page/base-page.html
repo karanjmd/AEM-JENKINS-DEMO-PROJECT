@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+<sly data-sly-use.analytics="com.adobe.aem.lacounty.dpss.core.components.models.AnalyticsPageInfoModel"></sly>
+<sly data-sly-use.basePage="${'com.adobe.aem.lacounty.dpss.core.models.BasePageModel' @ path=pageProperties.canonicalURL ? pageProperties.canonicalURL : currentPage.path}"/>
+<html data-sly-use.page="com.adobe.cq.wcm.core.components.models.Page" lang="${basePage.langAttribute}"
+      data-sly-use.head="head.html"
+      data-sly-use.footer="footer.html"
+      data-sly-use.redirect="redirect.html">
+    <head data-sly-call="${head.head @ page = page}"></head>
+    <body class="${page.cssClassNames}">
+   <!-- <div class="b-skip-navigation"><a href="">${'accessibilityMainContent' @ i18n}</a></div> -->
+        <sly data-sly-test.isRedirectPage="${page.redirectTarget && (wcmmode.edit || wcmmode.preview)}"
+             data-sly-call="${redirect.redirect @ redirectTarget = page.redirectTarget}"></sly>
+        <sly data-sly-test="${!isRedirectPage}">
+            <sly data-sly-include="body.socialmedia_begin.html"></sly>
+            <sly data-sly-include="body.html"></sly>
+            <sly data-sly-call="${footer.footer @ page = page}"></sly>
+            <sly data-sly-include="body.socialmedia_end.html"></sly>
+        </sly>
+
+     <sly data-sly-test="${pageProperties.isArchived}">
+        <style>
+        	.watermarked::before {
+            	position: fixed;
+            	top: -75%;right: -50%;
+                display: block;
+                width: 300%;
+                height: 300%;
+                transform: rotate(-45deg);
+                content: attr(data-watermark);
+                font-size: 22px;
+                opacity: 0.7;
+                line-height: 6.5em;
+                letter-spacing: 2px;
+                word-spacing: 30px;
+                color: #ff0523;
+                z-index:1;
+           	}
+        </style>
+        <div class="watermarked" data-watermark="Archived"></div>
+        <div class="breadcrumb__link breadcrumb__link--previousLink footer__list" 
+        	style="position: absolute;right: 60px;top: 125px;display: block;z-index: 3;">
+            <a href="${pageProperties.mainPageLink}" style="color: #000;font-weight: 400;">
+            	Navigate to the latest policy page
+            </a>
+        </div>
+        <script>
+        Array.from(document.querySelectorAll('.watermarked')).forEach(function(el) {
+        	el.dataset.watermark = (el.dataset.watermark + ' ').repeat(10000)
+        });
+        </script>
+   </sly>
+   <script>
+   const urlParams = new URLSearchParams(window.location.search);
+   const myParam = urlParams.get('intcid');
+   if(urlParams.get('intcid')!=null)
+   {
+   }
+document.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', (e) => {
+    let targetUrl = e.target.href;
+	if(targetUrl.includes("?intcid"))
+	{
+	const queryParam = targetUrl.split('?');
+	let indexofq=targetUrl.indexOf("?");
+	let substringval=targetUrl.substr(0,indexofq);
+	let finalurl=substringval+".html?"+queryParam[queryParam.length-1];
+	$("a").attr("href", finalurl);
+	}
+  });
+});
+  window.adobeDataLayer = window.adobeDataLayer || [];
+window.adobeDataLayer.push({
+"event":"pageLoaded",
+"web": {
+ "webPageDetails": {
+"name":'${analytics.pageName @ context="scriptString"}',
+"server":window.location.hostname,
+"siteSection":'${analytics.siteSection @ context="scriptString"}',
+ "pageViews": {
+ "value":1
+ }
+ }
+ }, 
+"pageInfo":{
+ "siteSection1": '${analytics.siteSectionLevelOne @ context="scriptString"}',
+ "siteSection2": '${analytics.siteSectionLevelTwo @ context="scriptString"}',
+ "siteSection3": '${analytics.siteSectionLevelThree @ context="scriptString"}',
+ "siteSection4": '${analytics.siteSectionLevelFour @ context="scriptString"}',
+ "siteSection5": '${analytics.siteSectionLevelFive @ context="scriptString"}',
+ "pageType": '${analytics.pageType @ context="scriptString"}',
+ "pageURL": window.location.href,
+ "language": "english"
+ }});
+   </script>
+
+    </body>
+</html>

@@ -1,0 +1,40 @@
+<sly data-sly-use.megamenu="com.adobe.aem.lacounty.dpss.core.models.MegaMenuModel"/>
+<header>
+    <nav class="main-menu">
+		<div class="mainNav container-wrapper">
+			<a href="${megamenu.logoHyperLink}" class="main-logo"><img src="${megamenu.logo}" alt="${megamenu.logoAltTxt}"></a>
+					<div class="mainNav__menuToggle">
+					<span class="mainNav__bar"></span>
+					<span class="mainNav__bar"></span>
+					<span class="mainNav__bar"></span>
+				   </div>
+
+			<div class="mainNav__listWrapper">
+             <ul data-sly-list="${megamenu.titleLinks}" class="mainNav__list">
+				<li class="mainNav__item"><a href="${item.links}" class="mainNav__link" target=${item.openInTab}>${item.title}</a></li>
+
+               </ul>
+
+            <ul class="mainNav__searchContainer">
+            	<li class="mainNav__item mainNav__searchItem">
+                <div class="mainNav__form">
+                    <div class="mainNav__dropdown">
+                        <select class="mainNav__select" id="search-filter">
+                         <sly data-sly-list="${megamenu.search}">
+                            <option value="${item.filter}">${item.filter}</option>
+                         </sly>
+                        </select>
+                    </div>
+					<div class="mainNav__search">
+						<input class="mainNav__searchBar" type="text" id="searchbar-box" placeholder="Search all of my DPSS">
+                        <button class="mainNav__searchIcon" id="searchbar-button">
+                            <i class="fa fa-search" aria-hidden="true"></i></button>
+					</div>
+                </div>
+           		 </li>
+            	</ul>
+                <a href="${megamenu.resultLink}" id="searchResultsUrl" class="is-hidden"></a>
+            </div>
+		</div>
+     </nav>
+</header>

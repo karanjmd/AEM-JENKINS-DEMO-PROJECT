@@ -1,0 +1,53 @@
+<sly data-sly-use.seach="com.adobe.aem.lacounty.dpss.core.models.SearchResultModel" />
+<div class="right-section">
+    <div class="cmp-container">
+        <div class="rsp-resultPage">
+            <div class="rsp-resultView-wrapper">
+                <div class="rsp-searchContainer">
+                    <input class="rsp-searchBar" id="rsp-searchInput" type="text" placeholder="${seach.searchPlaceHolder}" />
+                    <a href="#" class="rsp-searchIcon" id="rsp-fetchResult"><i class="fa fa-search"></i></a>
+                </div>
+
+                <div class="rsp-viewOptions">
+                    <a href="#" class="rsp-optGrid"><i class="fa-solid fa-grip"></i></a>
+                    <a href="#" class="rsp-optList"><i class="fa-solid fa-list"></i></a>
+                    <a href="#" class="rsp-mobFilter"><i class="fa-solid fa-filter"></i></a>
+                </div>
+            </div>
+            <div class="rsp-countFilterWrapper">
+                <div id="resultCount" class="rsp-resultCount"></div>
+                <div id="displayedResult" class="rsp-resultDisplayed"></div>
+                <div class="rsp-resultFilters">
+                    <div class="rsp-resultFilterWrap">
+                        <select class="rsp-sortBy" name="sortBy">
+                            <ul data-sly-list="${seach.getSortOptions}">
+                                <li>
+                                    <option value="${item.optionValue}">${item.option}</option>
+                                </li>
+                            </ul>
+                        </select>
+                        <i class="fa-solid fa-sort-down"></i>
+                    </div>
+
+                    <div class="rsp-resultFilterWrap">
+                        <select class="rsp-direction" name="direction">
+                            <ul data-sly-list="${seach.getSortDirections}">
+                                <li>
+                                    <option value="${item.getSortDirectionValue}">${item.getSortDirection}</option>
+                                </li>
+                            </ul>
+                        </select>
+                        <i class="fa-solid fa-sort-down"></i>
+                    </div>
+                </div>
+            </div>
+            <div id="resultsContainer" class="rsp-resultsContainer result-listView"></div>
+                <div id="loadResults" class="rsp-loadMore">
+                <div id="loadMoreButton">${seach.loadMoreText}</div>
+                <!-- <a href="${seach.loadMoreText}" id="loadMoreButton"></a> -->
+                <!--- <a href="${seach.resultsSize}" id="searchResultsSize" class="is-hidden"></a> --->
+                <a href="${seach.resultsSize}" id="searchResultsSize"></a>
+            </div>
+        </div>
+    </div>
+</div>

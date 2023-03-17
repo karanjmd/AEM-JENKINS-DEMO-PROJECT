@@ -1,0 +1,21 @@
+.cmp-contentfragment {}
+.cmp-contentfragment__title {
+	display: none;
+}
+.cmp-contentfragment__description {
+	display: none;
+}
+.cmp-contentfragment__elements {
+	ul, ol{
+	padding-inline-start: 40px;
+}}
+.cmp-contentfragment__element {
+	
+}
+//.cmp-contentfragment__element--myElementName {}
+.cmp-contentfragment__element-title {
+	display: none;
+}
+.cmp-contentfragment__element-value {
+margin-inline-start: 0;
+}

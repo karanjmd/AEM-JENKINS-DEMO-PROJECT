@@ -1,0 +1,12 @@
+{
+    "video": {
+        "jcr:primaryType": "nt:unstructured",
+        "jcr:createdBy": "admin",
+        "videoTitle": "video",
+        "jcr:lastModifiedBy": "admin",
+        "jcr:created": "Tue Jul 26 2022 11:44:35 GMT+0530",
+        "jcr:lastModified": "Tue Jul 26 2022 11:45:01 GMT+0530",
+        "sling:resourceType": "dpss/components/content/video",
+        "videoCode": "This is video embed code"
+    }
+}

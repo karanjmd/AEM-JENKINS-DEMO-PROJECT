@@ -1,0 +1,44 @@
+.cmp-form-options {
+    margin: 0 0 1rem 0;
+    padding: 0;
+    border: 0;
+    .cmp-form-options__legend {
+        font-weight: fweight(600);
+        margin-bottom: 0.9375rem;
+        display: block;
+        font-size: fsize(16);
+    }
+    .cmp-form-options__field-label {
+        display: block;
+    }
+    .cmp-form-options__field {
+        margin-bottom: 0.9375rem;
+        font-size: fsize(16);          
+    }
+    .cmp-form-options__label {
+        display: block;
+    }
+    .cmp-form-options__field--drop-down {
+        width: 100%;
+        padding: 1rem 1.5rem 1rem 0.9375rem;
+        line-height: 1.5;
+        display: block;
+        box-sizing: border-box;
+        margin: 0;
+        border: 1px solid #707070;
+        border-radius: 0;
+        appearance: none;
+        background-color: #fff;
+        background-image: url("../../clientlib-site/resources/images/selector-arrow3.svg");
+        background-repeat: no-repeat, repeat;
+        background-position: right 0.7em top 50%, 0 0;
+        background-size: 0.5em auto, 100%;
+    }
+}
+.cmp-form-options__field--checkbox {}
+.cmp-form-options__field--radio {}
+.cmp-form-options__field-description {}
+
+.cmp-form-options__drop-down-field {}
+.cmp-form-options__multi-drop-down-field {}
+.cmp-form-options__help-message {}
